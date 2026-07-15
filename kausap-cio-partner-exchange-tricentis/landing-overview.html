@@ -1,0 +1,325 @@
+<!-- =============================================
+     SECTION: Overview & Why Attend
+     KauSAP CIO Partner Exchange with Tricentis
+     ============================================= -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+  :root {
+    --navy:        #160a3e;
+    --navy-mid:    #251260;
+    --gold:        #e8a020;
+    --gold-pale:   #fffbea;
+    --gold-soft:   #fef3c7;
+    --white:       #ffffff;
+    --text-dark:   #0f172a;
+    --text-mid:    #334155;
+    --text-muted:  #64748b;
+    --border:      #e2e8f0;
+    --section-alt: #f8fafc;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: var(--white); color: var(--text-dark); line-height: 1.6;
+  }
+
+  /* ── OVERVIEW ── */
+  .overview {
+    background: var(--white);
+    padding: 88px 0;
+  }
+
+  .overview-inner {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .section-tag {
+    display: inline-block; font-size: .78rem; font-weight: 700;
+    letter-spacing: .1em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: .8rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.7rem, 3.5vw, 2.6rem); font-weight: 800;
+    color: var(--navy-mid); letter-spacing: -.5px; line-height: 1.2;
+    margin-bottom: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-mid);
+    margin-top: -1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Intro text block */
+  .overview-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    max-width: 820px;
+    margin: 0 auto;
+  }
+
+  .overview-body p {
+    font-size: .97rem;
+    color: var(--text-mid);
+    line-height: 1.85;
+  }
+
+  .overview-body p:first-child {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--text-dark);
+  }
+
+  .overview-body p.highlight {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--navy);
+    font-style: italic;
+  }
+
+  /* Divider */
+  .section-divider {
+    width: 56px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), #f59e0b);
+    border-radius: 2px;
+    margin: 3rem auto;
+  }
+
+  /* ── WHY ATTEND BLOCK ── */
+  .why-block {
+    background: var(--section-alt);
+    border-radius: 20px;
+    padding: 3rem 3.2rem;
+    margin-top: 3rem;
+  }
+
+  .why-block-header {
+    margin-bottom: 1.8rem;
+  }
+
+  .why-block-intro {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2.4rem;
+  }
+
+  .why-block-intro p {
+    font-size: .95rem;
+    color: var(--text-mid);
+    line-height: 1.8;
+  }
+
+  .why-block-intro p:first-child {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-dark);
+  }
+
+  .why-block-intro p.no-fluff {
+    font-size: .9rem;
+    font-weight: 600;
+    color: var(--navy);
+    font-style: italic;
+  }
+
+  .why-topics-label {
+    font-size: .82rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 1.2rem;
+  }
+
+  /* Topic cards */
+  .why-topics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .why-topics-grid.five-items .topic-card:last-child {
+    grid-column: 1 / -1;
+    max-width: 50%;
+    justify-self: center;
+  }
+
+  .topic-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.4rem 1.5rem;
+    transition: transform .18s, box-shadow .18s, border-color .18s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .topic-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), #f59e0b);
+    opacity: 0;
+    transition: opacity .18s;
+  }
+
+  .topic-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 28px rgba(22,10,62,.1);
+    border-color: rgba(232,160,32,.4);
+  }
+
+  .topic-card:hover::before { opacity: 1; }
+
+  .topic-num {
+    font-size: .72rem;
+    font-weight: 800;
+    color: var(--gold);
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    margin-bottom: .5rem;
+  }
+
+  .topic-card h3 {
+    font-size: .93rem;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.45;
+    margin-bottom: .4rem;
+  }
+
+  .topic-card p {
+    font-size: .82rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+  }
+
+  /* Closing statement */
+  .why-closing {
+    font-size: .93rem;
+    color: var(--text-mid);
+    line-height: 1.8;
+    font-style: italic;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--border);
+  }
+
+  @media (max-width: 640px) {
+    .overview { padding: 48px 0; }
+    .section-title { font-size: 1.4rem; }
+    .section-subtitle { font-size: .95rem; margin-top: -1rem; }
+    .overview-body p { font-size: .88rem; }
+    .overview-body p:first-child { font-size: .92rem; }
+    .why-block { padding: 1.8rem 1.2rem; margin-top: 2rem; }
+    .why-block-intro p { font-size: .88rem; }
+    .why-block-intro p:first-child { font-size: .9rem; }
+    .why-topics-grid { grid-template-columns: 1fr; }
+    .why-topics-grid.five-items .topic-card:last-child { max-width: 100%; }
+    .topic-card h3 { font-size: .88rem; }
+    .topic-card p { font-size: .78rem; }
+    .why-closing { font-size: .85rem; }
+    .section-divider { margin: 2rem auto; }
+  }
+</style>
+
+<!-- OVERVIEW & WHY ATTEND SECTION -->
+<section class="overview">
+  <div class="overview-inner">
+
+    <!-- Intro -->
+    <div style="text-align:center; margin-bottom: 2rem;">
+      <span class="section-tag">Overview</span>
+      <h2 class="section-title">KauSAP CIO Partner Exchange <br/>with Tricentis</h2>
+    </div>
+
+    <div class="overview-body">
+      <p>
+        Innovation Shouldn't Come with Unnecessary Risk.
+      </p>
+      <p>
+        Every digital initiative promises growth. Every system upgrade promises better performance. Every AI investment promises greater efficiency. But behind every transformation lies the possibility of downtime, failed releases, security vulnerabilities, and costly business disruption.
+      </p>
+      <p class="highlight">
+        The organizations moving ahead aren't simply transforming faster &mdash; they're transforming smarter.
+      </p>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- Why Attend block -->
+    <div class="why-block">
+
+      <div class="why-block-header">
+        <span class="section-tag">Why Attend</span>
+        <h2 class="section-title" style="margin-bottom:0;">Be Part of the Executive Conversation</h2>
+      </div>
+
+      <div class="why-block-intro">
+        <p>
+          The KauSAP CIO Partner Exchange with Tricentis is an invitation-only executive forum where technology leaders come together to exchange ideas, challenge conventional thinking, and explore how Applied AI is redefining enterprise quality, resilience, and transformation success.
+        </p>
+        <p>
+          Through practical discussions and peer insights, discover how leading organizations are reducing risk while accelerating innovation across increasingly connected enterprise environments.
+        </p>
+        <p class="no-fluff">
+          No sales pitches. No generic presentations. Just meaningful conversations with leaders facing the same transformation challenges.
+        </p>
+      </div>
+
+      <div class="why-topics-label">What You'll Explore</div>
+
+      <div class="why-topics-grid five-items">
+
+        <div class="topic-card">
+          <div class="topic-num">Topic 01</div>
+          <h3>Accelerate Transformation with Confidence</h3>
+          <p>Discover how AI-powered quality engineering enables faster releases without compromising business continuity.</p>
+        </div>
+
+        <div class="topic-card">
+          <div class="topic-num">Topic 02</div>
+          <h3>Build Enterprise Resilience</h3>
+          <p>Learn strategies to protect mission-critical SAP and non-SAP applications from disruption.</p>
+        </div>
+
+        <div class="topic-card">
+          <div class="topic-num">Topic 03</div>
+          <h3>Reduce Risk Across the Transformation Journey</h3>
+          <p>Explore practical approaches to minimizing implementation failures, regression risks, and operational downtime.</p>
+        </div>
+
+        <div class="topic-card">
+          <div class="topic-num">Topic 04</div>
+          <h3>Leverage Applied AI Beyond Automation</h3>
+          <p>See how AI is improving testing accuracy, expanding coverage, and helping organizations innovate at scale.</p>
+        </div>
+
+        <div class="topic-card">
+          <div class="topic-num">Topic 05</div>
+          <h3>Exchange Insights with Executive Peers</h3>
+          <p>Connect with fellow CIOs and technology leaders driving enterprise transformation across industries.</p>
+        </div>
+
+      </div>
+
+      <p class="why-closing">
+        Every transformation is a leap forward. Make sure it's one you can trust. Reserve your seat for this exclusive executive exchange.
+      </p>
+
+    </div>
+
+  </div>
+</section>
