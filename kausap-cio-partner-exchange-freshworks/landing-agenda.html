@@ -1,0 +1,370 @@
+<!-- =============================================
+     SECTION: Event Agenda
+     KauSAP CIO Partner Exchange with Freshworks & eCloudvalley
+     ============================================= -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+  :root {
+    --navy:        #160a3e;
+    --navy-mid:    #251260;
+    --gold:        #e8a020;
+    --white:       #ffffff;
+    --text-dark:   #0f172a;
+    --text-mid:    #334155;
+    --text-muted:  #64748b;
+    --border:      #e2e8f0;
+    --section-alt: #f8fafc;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: var(--white); color: var(--text-dark); line-height: 1.6;
+  }
+
+  /* ── AGENDA SECTION ── */
+  .agenda {
+    background: var(--white);
+    padding: 88px 0;
+  }
+
+  .agenda-inner {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .agenda-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+  }
+
+  .section-tag {
+    display: inline-block; font-size: .78rem; font-weight: 700;
+    letter-spacing: .1em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: .8rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.7rem, 3.5vw, 2.6rem); font-weight: 800;
+    color: var(--text-dark); letter-spacing: -.5px; line-height: 1.2;
+  }
+
+  /* ── TIMELINE ── */
+  .agenda-timeline {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .agenda-item {
+    display: flex;
+    gap: 0;
+    position: relative;
+  }
+
+  /* Time column */
+  .agenda-time {
+    width: 96px;
+    min-width: 96px;
+    text-align: right;
+    padding-right: 1.2rem;
+    padding-top: 2px;
+    font-size: .8rem;
+    font-weight: 700;
+    color: var(--navy-mid);
+    line-height: 1.4;
+  }
+
+  /* Dot + line column */
+  .agenda-marker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 28px;
+    min-width: 28px;
+  }
+
+  .agenda-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--gold);
+    border: 2px solid var(--white);
+    box-shadow: 0 0 0 2px var(--gold);
+    flex-shrink: 0;
+    margin-top: 4px;
+    z-index: 1;
+  }
+
+  .agenda-item.ai-break .agenda-dot {
+    background: var(--border);
+    box-shadow: 0 0 0 2px #cbd5e1;
+  }
+
+  .agenda-item.ai-lunch .agenda-dot {
+    background: #3D58F4;
+    box-shadow: 0 0 0 2px #3D58F4;
+  }
+
+  .agenda-item.ai-end .agenda-dot {
+    background: var(--navy);
+    box-shadow: 0 0 0 2px var(--navy);
+  }
+
+  .agenda-connector {
+    flex: 1;
+    width: 2px;
+    background: var(--border);
+    margin-top: 4px;
+  }
+
+  .agenda-item:last-child .agenda-connector {
+    display: none;
+  }
+
+  /* Content column */
+  .agenda-content {
+    flex: 1;
+    padding-left: 1.2rem;
+    padding-bottom: 2rem;
+  }
+
+  .agenda-item:last-child .agenda-content {
+    padding-bottom: 0;
+  }
+
+  .agenda-session {
+    font-size: .98rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    line-height: 1.45;
+  }
+
+  .agenda-item.ai-break .agenda-session {
+    font-weight: 500;
+    color: var(--text-muted);
+  }
+
+  .agenda-item.ai-lunch .agenda-session {
+    font-weight: 600;
+    color: #3D58F4;
+  }
+
+  .agenda-item.ai-end .agenda-session {
+    font-weight: 700;
+    color: var(--navy);
+  }
+
+  /* Session label prefix */
+  .session-label {
+    color: var(--gold);
+    font-weight: 800;
+  }
+
+  /* Speaker block */
+  .agenda-speaker {
+    display: flex;
+    flex-direction: column;
+    gap: .15rem;
+    margin-top: .6rem;
+    padding: .75rem 1rem;
+    background: var(--section-alt);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 8px 8px 0;
+  }
+
+  .speaker-name {
+    font-size: .88rem;
+    font-weight: 700;
+    color: var(--navy);
+  }
+
+  .speaker-role {
+    font-size: .8rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  @media (max-width: 600px) {
+    .agenda { padding: 48px 0; }
+    .agenda-header { margin-bottom: 2rem; }
+    .section-title { font-size: 1.4rem; }
+    .agenda-time { width: 68px; min-width: 68px; font-size: .7rem; padding-right: .8rem; }
+    .agenda-marker { width: 22px; min-width: 22px; }
+    .agenda-dot { width: 10px; height: 10px; }
+    .agenda-content { padding-left: .7rem; padding-bottom: 1.4rem; }
+    .agenda-session { font-size: .88rem; }
+    .speaker-name { font-size: .82rem; }
+    .speaker-role { font-size: .75rem; }
+    .agenda-speaker { padding: .6rem .8rem; }
+  }
+</style>
+
+<!-- AGENDA SECTION -->
+<section class="agenda">
+  <div class="agenda-inner">
+
+    <div class="agenda-header">
+      <span class="section-tag">Program Flow</span>
+      <h2 class="section-title">Event Agenda</h2>
+    </div>
+
+    <div class="agenda-timeline">
+
+      <!-- 10:00 AM -->
+      <div class="agenda-item ai-break">
+        <div class="agenda-time">10:00 AM</div>
+        <div class="agenda-marker">
+          <div class="agenda-dot"></div>
+          <div class="agenda-connector"></div>
+        </div>
+        <div class="agenda-content">
+          <div class="agenda-session">Arrival and Registration</div>
+        </div>
+      </div>
+
+      <!-- 10:30 AM -->
+      <div class="agenda-item">
+        <div class="agenda-time">10:30 AM</div>
+        <div class="agenda-marker">
+          <div class="agenda-dot"></div>
+          <div class="agenda-connector"></div>
+        </div>
+        <div class="agenda-content">
+          <div class="agenda-session">Welcome Remarks</div>
+          <div class="agenda-speaker">
+            <span class="speaker-name">Nestor De Guzman</span>
+            <span class="speaker-role">KauSAP Auditor</span>
+            <span class="speaker-role">Chief AI and Digital Officer / CIO</span>
+            <span class="speaker-role">Multi-M Food Corporation</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 10:40 AM -->
+      <div class="agenda-item">
+        <div class="agenda-time">10:40 AM</div>
+        <div class="agenda-marker">
+          <div class="agenda-dot"></div>
+          <div class="agenda-connector"></div>
+        </div>
+        <div class="agenda-content">
+          <div class="agenda-session">
+            <span class="session-label">Opening Keynote:</span> The Friction Tax of Enterprise Operations
+          </div>
+        </div>
+      </div>
+
+      <!-- 10:55 AM -->
+      <div class="agenda-item">
+        <div class="agenda-time">10:55 AM</div>
+        <div class="agenda-marker">
+          <div class="agenda-dot"></div>
+          <div class="agenda-connector"></div>
+        </div>
+        <div class="agenda-content">
+          <div class="agenda-session">
+            <span class="session-label">Insight Session:</span> From Integration to Intelligence
+          </div>
+        </div>
+      </div>
+
+      <!-- 11:25 AM -->
+      <div class="agenda-item">
+        <div class="agenda-time">11:25 AM</div>
+        <div class="agenda-marker">
+          <div class="agenda-dot"></div>
+          <div class="agenda-connector"></div>
+        </div>
+        <div class="agenda-content">
+          <div class="agenda-session">Executive Use Cases</div>
+        </div>
+      </div>
+
+      <!-- 11:40 AM -->
+      <div class="agenda-item">
+        <div class="agenda-time">11:40 AM</div>
+        <div class="agenda-marker">
+          <div class="agenda-dot"></div>
+          <div class="agenda-connector"></div>
+        </div>
+        <div class="agenda-content">
+          <div class="agenda-session">CIO Roundtable Discussion</div>
+        </div>
+      </div>
+
+      <!-- 12:00 PM -->
+      <div class="agenda-item ai-lunch">
+        <div class="agenda-time">12:00 PM</div>
+        <div class="agenda-marker">
+          <div class="agenda-dot"></div>
+          <div class="agenda-connector"></div>
+        </div>
+        <div class="agenda-content">
+          <div class="agenda-session">Lunch &amp; Networking</div>
+        </div>
+      </div>
+
+      <!-- 1:00 PM -->
+      <div class="agenda-item">
+        <div class="agenda-time">1:00 PM</div>
+        <div class="agenda-marker">
+          <div class="agenda-dot"></div>
+          <div class="agenda-connector"></div>
+        </div>
+        <div class="agenda-content">
+          <div class="agenda-session">Transformation Blueprint</div>
+        </div>
+      </div>
+
+      <!-- 1:25 PM -->
+      <div class="agenda-item">
+        <div class="agenda-time">1:25 PM</div>
+        <div class="agenda-marker">
+          <div class="agenda-dot"></div>
+          <div class="agenda-connector"></div>
+        </div>
+        <div class="agenda-content">
+          <div class="agenda-session">Business Impact &amp; Governance</div>
+        </div>
+      </div>
+
+      <!-- 1:40 PM -->
+      <div class="agenda-item ai-break">
+        <div class="agenda-time">1:40 PM</div>
+        <div class="agenda-marker">
+          <div class="agenda-dot"></div>
+          <div class="agenda-connector"></div>
+        </div>
+        <div class="agenda-content">
+          <div class="agenda-session">Q&amp;A</div>
+        </div>
+      </div>
+
+      <!-- 1:50 PM -->
+      <div class="agenda-item">
+        <div class="agenda-time">1:50 PM</div>
+        <div class="agenda-marker">
+          <div class="agenda-dot"></div>
+          <div class="agenda-connector"></div>
+        </div>
+        <div class="agenda-content">
+          <div class="agenda-session">Closing Remarks and Networking</div>
+        </div>
+      </div>
+
+      <!-- 2:00 PM -->
+      <div class="agenda-item ai-end">
+        <div class="agenda-time">2:00 PM</div>
+        <div class="agenda-marker">
+          <div class="agenda-dot"></div>
+        </div>
+        <div class="agenda-content">
+          <div class="agenda-session">End</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

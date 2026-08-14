@@ -1,0 +1,181 @@
+<!-- =============================================
+     SECTION: Footer
+     SSI - Secure the Foundation. Orchestrate the Future.
+     ============================================= -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+  :root {
+    --navy:        #001141;
+    --navy-mid:    #0a1f5c;
+    --blue:        #0f62fe;
+    --blue-mid:    #1e6fd9;
+    --white:       #ffffff;
+    --text-muted:  #64748b;
+    --border:      #e2e8f0;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: var(--white); line-height: 1.6;
+  }
+
+  /* ── FOOTER ── */
+  .site-footer {
+    background: var(--navy);
+    padding: 56px 0 32px;
+  }
+
+  .footer-inner {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Top row */
+  .footer-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    padding-bottom: 2.4rem;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+    margin-bottom: 2rem;
+  }
+
+  .footer-brand-name {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--white);
+    letter-spacing: -.3px;
+    margin-bottom: .4rem;
+  }
+
+  .footer-brand-name span {
+    color: #60a5fa;
+  }
+
+  .footer-brand-sub {
+    font-size: .82rem;
+    color: rgba(255,255,255,.5);
+    line-height: 1.6;
+  }
+
+  .footer-partners {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: .4rem;
+  }
+
+  .footer-partners-label {
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.4);
+  }
+
+  .footer-partners-list {
+    font-size: .88rem;
+    font-weight: 600;
+    color: rgba(255,255,255,.75);
+    text-align: right;
+    line-height: 1.7;
+  }
+
+  .footer-partners-list span {
+    color: #60a5fa;
+  }
+
+  /* Event strip */
+  .footer-event {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+    margin-bottom: 2rem;
+  }
+
+  .footer-event-item {
+    display: flex;
+    flex-direction: column;
+    gap: .15rem;
+  }
+
+  .footer-event-label {
+    font-size: .68rem;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: #60a5fa;
+  }
+
+  .footer-event-value {
+    font-size: .88rem;
+    font-weight: 600;
+    color: rgba(255,255,255,.85);
+  }
+
+  /* Bottom */
+  .footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-copy {
+    font-size: .78rem;
+    color: rgba(255,255,255,.35);
+  }
+
+  @media (max-width: 640px) {
+    .site-footer { padding: 40px 0 24px; }
+    .footer-top { flex-direction: column; }
+    .footer-partners { align-items: flex-start; }
+    .footer-partners-list { text-align: left; }
+    .footer-brand-name { font-size: 1rem; }
+  }
+</style>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-brand-name">Secure the Foundation. <span>Orchestrate the Future.</span></div>
+        <div class="footer-brand-sub">Certificate Lifecycle Management &amp; Secure Agentic AI</div>
+      </div>
+      <div class="footer-partners">
+        <div class="footer-partners-label">Presented by</div>
+        <div class="footer-partners-list">
+          <span>StrategicSynergy, Inc.</span><br/>
+          IBM Platinum Partner
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-event">
+      <div class="footer-event-item">
+        <span class="footer-event-label">Date</span>
+        <span class="footer-event-value">18 September 2026 &mdash; Friday</span>
+      </div>
+      <div class="footer-event-item">
+        <span class="footer-event-label">Time</span>
+        <span class="footer-event-value">3:00 PM &ndash; 7:00 PM</span>
+      </div>
+      <div class="footer-event-item">
+        <span class="footer-event-label">Venue</span>
+        <span class="footer-event-value">Seda Ayala Center Cebu, Rosal<br/>Cebu Business Park, Cebu City</span>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2026 StrategicSynergy, Inc. All rights reserved.</div>
+    </div>
+
+  </div>
+</footer>

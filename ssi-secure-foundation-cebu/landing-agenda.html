@@ -1,0 +1,244 @@
+<!-- =============================================
+     SECTION: Event Agenda
+     SSI - Secure the Foundation. Orchestrate the Future.
+     ============================================= -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+  :root {
+    --navy:        #001141;
+    --navy-mid:    #0a1f5c;
+    --blue:        #0f62fe;
+    --blue-mid:    #1e6fd9;
+    --white:       #ffffff;
+    --text-dark:   #0f172a;
+    --text-mid:    #334155;
+    --text-muted:  #64748b;
+    --border:      #e2e8f0;
+    --section-alt: #f8fafc;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: var(--white); color: var(--text-dark); line-height: 1.6;
+  }
+
+  /* ── AGENDA ── */
+  .agenda {
+    background: var(--section-alt);
+    padding: 88px 0;
+  }
+
+  .agenda-inner {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .agenda-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+  }
+
+  .section-tag {
+    display: inline-block; font-size: .78rem; font-weight: 700;
+    letter-spacing: .1em; text-transform: uppercase;
+    color: var(--blue); margin-bottom: .8rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.7rem, 3.5vw, 2.6rem); font-weight: 800;
+    color: var(--navy); letter-spacing: -.5px; line-height: 1.2;
+  }
+
+  /* Timeline */
+  .agenda-timeline {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .agenda-item {
+    display: flex;
+    gap: 0;
+    position: relative;
+  }
+
+  .agenda-time {
+    width: 120px;
+    min-width: 120px;
+    text-align: right;
+    padding-right: 1.2rem;
+    padding-top: 2px;
+    font-size: .8rem;
+    font-weight: 700;
+    color: var(--navy-mid);
+    line-height: 1.4;
+  }
+
+  .agenda-marker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 28px;
+    min-width: 28px;
+  }
+
+  .agenda-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--blue);
+    border: 2px solid var(--white);
+    box-shadow: 0 0 0 2px var(--blue);
+    flex-shrink: 0;
+    margin-top: 4px;
+    z-index: 1;
+  }
+
+  .agenda-item.ai-reg .agenda-dot {
+    background: var(--border);
+    box-shadow: 0 0 0 2px #cbd5e1;
+  }
+
+  .agenda-item.ai-dinner .agenda-dot {
+    background: #7c3aed;
+    box-shadow: 0 0 0 2px #7c3aed;
+  }
+
+  .agenda-item.ai-end .agenda-dot {
+    background: var(--navy);
+    box-shadow: 0 0 0 2px var(--navy);
+  }
+
+  .agenda-connector {
+    flex: 1;
+    width: 2px;
+    background: var(--border);
+    margin-top: 4px;
+  }
+
+  .agenda-item:last-child .agenda-connector {
+    display: none;
+  }
+
+  .agenda-content {
+    flex: 1;
+    padding-left: 1.2rem;
+    padding-bottom: 2rem;
+  }
+
+  .agenda-item:last-child .agenda-content {
+    padding-bottom: 0;
+  }
+
+  .agenda-session {
+    font-size: .98rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    line-height: 1.45;
+  }
+
+  .agenda-item.ai-reg .agenda-session {
+    font-weight: 500;
+    color: var(--text-muted);
+  }
+
+  .agenda-item.ai-dinner .agenda-session {
+    font-weight: 700;
+    color: #7c3aed;
+  }
+
+  .agenda-item.ai-end .agenda-session {
+    font-weight: 700;
+    color: var(--navy);
+  }
+
+  .session-label {
+    color: var(--blue);
+    font-weight: 800;
+  }
+
+  @media (max-width: 600px) {
+    .agenda { padding: 48px 0; }
+    .agenda-header { margin-bottom: 2rem; }
+    .section-title { font-size: 1.4rem; }
+    .agenda-time { width: 80px; min-width: 80px; font-size: .7rem; padding-right: .8rem; }
+    .agenda-marker { width: 22px; min-width: 22px; }
+    .agenda-dot { width: 10px; height: 10px; }
+    .agenda-content { padding-left: .7rem; padding-bottom: 1.4rem; }
+    .agenda-session { font-size: .88rem; }
+  }
+</style>
+
+<!-- AGENDA SECTION -->
+<section class="agenda">
+  <div class="agenda-inner">
+
+    <div class="agenda-header">
+      <span class="section-tag">Program Flow</span>
+      <h2 class="section-title">Event Agenda</h2>
+    </div>
+
+    <div class="agenda-timeline">
+
+      <div class="agenda-item ai-reg">
+        <div class="agenda-time">3:00 &ndash; 3:30 PM</div>
+        <div class="agenda-marker"><div class="agenda-dot"></div><div class="agenda-connector"></div></div>
+        <div class="agenda-content">
+          <div class="agenda-session">Registration</div>
+        </div>
+      </div>
+
+      <div class="agenda-item">
+        <div class="agenda-time">3:30 &ndash; 3:45 PM</div>
+        <div class="agenda-marker"><div class="agenda-dot"></div><div class="agenda-connector"></div></div>
+        <div class="agenda-content">
+          <div class="agenda-session">Opening Remarks</div>
+        </div>
+      </div>
+
+      <div class="agenda-item">
+        <div class="agenda-time">3:45 &ndash; 4:15 PM</div>
+        <div class="agenda-marker"><div class="agenda-dot"></div><div class="agenda-connector"></div></div>
+        <div class="agenda-content">
+          <div class="agenda-session"><span class="session-label">First Fireside Discussion</span></div>
+        </div>
+      </div>
+
+      <div class="agenda-item">
+        <div class="agenda-time">4:15 &ndash; 4:45 PM</div>
+        <div class="agenda-marker"><div class="agenda-dot"></div><div class="agenda-connector"></div></div>
+        <div class="agenda-content">
+          <div class="agenda-session"><span class="session-label">Second Fireside Discussion</span></div>
+        </div>
+      </div>
+
+      <div class="agenda-item">
+        <div class="agenda-time">4:45 &ndash; 5:15 PM</div>
+        <div class="agenda-marker"><div class="agenda-dot"></div><div class="agenda-connector"></div></div>
+        <div class="agenda-content">
+          <div class="agenda-session"><span class="session-label">Third Fireside Discussion</span></div>
+        </div>
+      </div>
+
+      <div class="agenda-item">
+        <div class="agenda-time">5:15 &ndash; 5:30 PM</div>
+        <div class="agenda-marker"><div class="agenda-dot"></div><div class="agenda-connector"></div></div>
+        <div class="agenda-content">
+          <div class="agenda-session">Closing Remarks</div>
+        </div>
+      </div>
+
+      <div class="agenda-item ai-dinner">
+        <div class="agenda-time">5:30 &ndash; 7:00 PM</div>
+        <div class="agenda-marker"><div class="agenda-dot"></div></div>
+        <div class="agenda-content">
+          <div class="agenda-session">Post Event Discussion &amp; Dinner</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

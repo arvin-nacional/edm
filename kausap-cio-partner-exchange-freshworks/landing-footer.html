@@ -1,0 +1,211 @@
+<!-- =============================================
+     SECTION: Footer
+     KauSAP CIO Partner Exchange with Freshworks & eCloudvalley
+     ============================================= -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+  :root {
+    --navy:        #160a3e;
+    --navy-mid:    #251260;
+    --gold:        #e8a020;
+    --white:       #ffffff;
+    --text-dark:   #0f172a;
+    --text-mid:    #334155;
+    --text-muted:  #64748b;
+    --border:      #e2e8f0;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: var(--white); color: var(--text-dark); line-height: 1.6;
+  }
+
+  /* ── FOOTER ── */
+  .site-footer {
+    background: var(--navy);
+    padding: 56px 0 32px;
+  }
+
+  .footer-inner {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Top row */
+  .footer-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    padding-bottom: 2.4rem;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+    margin-bottom: 2rem;
+  }
+
+  .footer-brand {
+    flex: 1;
+  }
+
+  .footer-brand-name {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--white);
+    letter-spacing: -.3px;
+    margin-bottom: .4rem;
+  }
+
+  .footer-brand-name span {
+    color: var(--gold);
+  }
+
+  .footer-brand-sub {
+    font-size: .82rem;
+    color: rgba(255,255,255,.5);
+    line-height: 1.6;
+  }
+
+  /* Partners block */
+  .footer-partners {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: .4rem;
+  }
+
+  .footer-partners-label {
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.4);
+  }
+
+  .footer-partners-list {
+    font-size: .88rem;
+    font-weight: 600;
+    color: rgba(255,255,255,.75);
+    text-align: right;
+    line-height: 1.7;
+  }
+
+  .footer-partners-list span {
+    color: var(--gold);
+  }
+
+  /* Event detail strip */
+  .footer-event {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+    margin-bottom: 2rem;
+  }
+
+  .footer-event-item {
+    display: flex;
+    flex-direction: column;
+    gap: .15rem;
+  }
+
+  .footer-event-label {
+    font-size: .68rem;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  .footer-event-value {
+    font-size: .88rem;
+    font-weight: 600;
+    color: rgba(255,255,255,.85);
+  }
+
+  /* Bottom row */
+  .footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-copy {
+    font-size: .78rem;
+    color: rgba(255,255,255,.35);
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 1.4rem;
+  }
+
+  .footer-links a {
+    font-size: .78rem;
+    color: rgba(255,255,255,.45);
+    text-decoration: none;
+    transition: color .18s;
+  }
+
+  .footer-links a:hover {
+    color: var(--gold);
+  }
+
+  @media (max-width: 640px) {
+    .site-footer { padding: 40px 0 24px; }
+    .footer-top { flex-direction: column; align-items: flex-start; }
+    .footer-partners { align-items: flex-start; }
+    .footer-partners-list { text-align: left; }
+    .footer-bottom { flex-direction: column; align-items: flex-start; }
+    .footer-brand-name { font-size: 1rem; }
+  }
+</style>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+
+    <!-- Top row: brand + partners -->
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <div class="footer-brand-name">KauSAP <span>CIO Partner Exchange</span></div>
+        <div class="footer-brand-sub">An exclusive executive forum for<br/>senior technology and business leaders.</div>
+      </div>
+
+      <div class="footer-partners">
+        <div class="footer-partners-label">In Partnership With</div>
+        <div class="footer-partners-list">
+          <span>Freshworks</span><br/>
+          eCloudvalley Philippines
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Event detail strip -->
+    <div class="footer-event">
+      <div class="footer-event-item">
+        <span class="footer-event-label">Date</span>
+        <span class="footer-event-value">August 18, 2026 &mdash; Tuesday</span>
+      </div>
+      <div class="footer-event-item">
+        <span class="footer-event-label">Time</span>
+        <span class="footer-event-value">10:00 AM &ndash; 2:00 PM</span>
+      </div>
+      <div class="footer-event-item">
+        <span class="footer-event-label">Venue</span>
+        <span class="footer-event-value">Penthouse 3001, 30F<br/>Ascott Bonifacio Global City</span>
+      </div>
+    </div>
+
+    <!-- Bottom row: copyright + links -->
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2026 KauSAP Community. All rights reserved.</div>
+    </div>
+
+  </div>
+</footer>
