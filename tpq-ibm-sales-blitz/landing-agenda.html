@@ -1,0 +1,410 @@
+<!-- =============================================
+     SECTION: Agenda (Day 1 + Day 2)
+     Power Up & Pitch: IBM Technology Sales Blitz
+     Wix HTML — scroll disabled
+     ============================================= -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+  html, body { margin: 0; padding: 0; overflow: hidden; width: 100%; }
+  * { box-sizing: border-box; }
+
+  .tpq-ag {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: #f8faff;
+    padding: 72px 0;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .tpq-ag-inner {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  .tpq-ag-tag {
+    display: inline-block;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: #1d4ed8;
+    background: #eff6ff;
+    padding: .3rem 1rem;
+    border-radius: 100px;
+    margin-bottom: 1rem;
+  }
+
+  .tpq-ag-title {
+    font-size: clamp(1.7rem, 3.5vw, 2.6rem);
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -.5px;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .tpq-ag-day {
+    margin-bottom: 3rem;
+  }
+
+  .tpq-ag-day:last-child {
+    margin-bottom: 0;
+  }
+
+  .tpq-ag-day-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.6rem;
+  }
+
+  .tpq-ag-day-badge {
+    background: #1d4ed8;
+    color: #ffffff;
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    padding: .4rem 1rem;
+    border-radius: 100px;
+  }
+
+  .tpq-ag-day-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0f172a;
+  }
+
+  .tpq-ag-day-sub {
+    font-size: .85rem;
+    color: #64748b;
+    margin-left: auto;
+  }
+
+  .tpq-ag-timeline {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tpq-ag-item {
+    display: flex;
+    gap: 0;
+    position: relative;
+  }
+
+  .tpq-ag-time {
+    width: 100px;
+    min-width: 100px;
+    text-align: right;
+    padding-right: 1rem;
+    padding-top: 2px;
+    font-size: .78rem;
+    font-weight: 700;
+    color: #1d4ed8;
+    line-height: 1.4;
+  }
+
+  .tpq-ag-marker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 24px;
+    min-width: 24px;
+  }
+
+  .tpq-ag-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #1d4ed8;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 0 2px #1d4ed8;
+    flex-shrink: 0;
+    margin-top: 4px;
+    z-index: 1;
+  }
+
+  .tpq-ag-item.ag-break .tpq-ag-dot {
+    background: #cbd5e1;
+    box-shadow: 0 0 0 2px #cbd5e1;
+  }
+
+  .tpq-ag-item.ag-meal .tpq-ag-dot {
+    background: #1e40af;
+    box-shadow: 0 0 0 2px #1e40af;
+  }
+
+  .tpq-ag-item.ag-end .tpq-ag-dot {
+    background: #0f172a;
+    box-shadow: 0 0 0 2px #0f172a;
+  }
+
+  .tpq-ag-connector {
+    flex: 1;
+    width: 2px;
+    background: #e2e8f0;
+    margin-top: 4px;
+  }
+
+  .tpq-ag-item:last-child .tpq-ag-connector {
+    display: none;
+  }
+
+  .tpq-ag-content {
+    flex: 1;
+    padding-left: 1rem;
+    padding-bottom: 1.4rem;
+  }
+
+  .tpq-ag-item:last-child .tpq-ag-content {
+    padding-bottom: 0;
+  }
+
+  .tpq-ag-session {
+    font-size: .9rem;
+    font-weight: 600;
+    color: #0f172a;
+    line-height: 1.45;
+  }
+
+  .tpq-ag-item.ag-break .tpq-ag-session {
+    font-weight: 500;
+    color: #64748b;
+  }
+
+  .tpq-ag-item.ag-meal .tpq-ag-session {
+    font-weight: 700;
+    color: #1e40af;
+  }
+
+  .tpq-ag-item.ag-end .tpq-ag-session {
+    font-weight: 700;
+    color: #0f172a;
+  }
+
+  .tpq-ag-label {
+    color: #1d4ed8;
+    font-weight: 800;
+  }
+
+  @media (max-width: 640px) {
+    .tpq-ag { padding: 48px 0; }
+    .tpq-ag-inner { padding: 0 20px; }
+    .tpq-ag-title { font-size: 1.4rem; margin-bottom: 2rem; }
+    .tpq-ag-day-header { flex-wrap: wrap; gap: .5rem; }
+    .tpq-ag-day-sub { margin-left: 0; width: 100%; }
+    .tpq-ag-time { width: 72px; min-width: 72px; font-size: .68rem; padding-right: .7rem; }
+    .tpq-ag-marker { width: 20px; min-width: 20px; }
+    .tpq-ag-dot { width: 8px; height: 8px; }
+    .tpq-ag-content { padding-left: .7rem; padding-bottom: 1rem; }
+    .tpq-ag-session { font-size: .82rem; }
+  }
+</style>
+
+<div style="width:100%;overflow:hidden;">
+<section class="tpq-ag">
+  <div class="tpq-ag-inner">
+
+    <div style="text-align:center;">
+      <span class="tpq-ag-tag">Program Flow</span>
+      <h2 class="tpq-ag-title">Agenda</h2>
+    </div>
+
+    <!-- Day 1 -->
+    <div class="tpq-ag-day">
+      <div class="tpq-ag-day-header">
+        <span class="tpq-ag-day-badge">Day 1</span>
+        <span class="tpq-ag-day-title">10 September 2026</span>
+        <span class="tpq-ag-day-sub">10:00 AM &ndash; 5:00 PM</span>
+      </div>
+
+      <div class="tpq-ag-timeline">
+
+        <div class="tpq-ag-item ag-break">
+          <div class="tpq-ag-time">10:00 AM</div>
+          <div class="tpq-ag-marker"><div class="tpq-ag-dot"></div><div class="tpq-ag-connector"></div></div>
+          <div class="tpq-ag-content"><div class="tpq-ag-session">Registration &amp; Networking Coffee</div></div>
+        </div>
+
+        <div class="tpq-ag-item ag-break">
+          <div class="tpq-ag-time">10:25 AM</div>
+          <div class="tpq-ag-marker"><div class="tpq-ag-dot"></div><div class="tpq-ag-connector"></div></div>
+          <div class="tpq-ag-content"><div class="tpq-ag-session">Welcome Ice Breaker</div></div>
+        </div>
+
+        <div class="tpq-ag-item">
+          <div class="tpq-ag-time">10:40 AM</div>
+          <div class="tpq-ag-marker"><div class="tpq-ag-dot"></div><div class="tpq-ag-connector"></div></div>
+          <div class="tpq-ag-content"><div class="tpq-ag-session">Opening Remarks</div></div>
+        </div>
+
+        <div class="tpq-ag-item">
+          <div class="tpq-ag-time">10:50 AM</div>
+          <div class="tpq-ag-marker"><div class="tpq-ag-dot"></div><div class="tpq-ag-connector"></div></div>
+          <div class="tpq-ag-content"><div class="tpq-ag-session"><span class="tpq-ag-label">Flash / Fusion Essentials</span></div></div>
+        </div>
+
+        <div class="tpq-ag-item">
+          <div class="tpq-ag-time">11:10 AM</div>
+          <div class="tpq-ag-marker"><div class="tpq-ag-dot"></div><div class="tpq-ag-connector"></div></div>
+          <div class="tpq-ag-content"><div class="tpq-ag-session"><span class="tpq-ag-label">Power PVS Fundamentals</span></div></div>
+        </div>
+
+        <div class="tpq-ag-item">
+          <div class="tpq-ag-time">11:40 AM</div>
+          <div class="tpq-ag-marker"><div class="tpq-ag-dot"></div><div class="tpq-ag-connector"></div></div>
+          <div class="tpq-ag-content"><div class="tpq-ag-session"><span class="tpq-ag-label">Power and Concert</span></div></div>
+        </div>
+
+        <div class="tpq-ag-item ag-meal">
+          <div class="tpq-ag-time">12:10 PM</div>
+          <div class="tpq-ag-marker"><div class="tpq-ag-dot"></div><div class="tpq-ag-connector"></div></div>
+          <div class="tpq-ag-content"><div class="tpq-ag-session">Lunch</div></div>
+        </div>
+
+        <div class="tpq-ag-item ag-break">
+          <div class="tpq-ag-time">12:40 PM</div>
+          <div class="tpq-ag-marker"><div class="tpq-ag-dot"></div><div class="tpq-ag-connector"></div></div>
+          <div class="tpq-ag-content"><div class="tpq-ag-session">Ice Breaker 2 &ndash; Energy Boost</div></div>
+        </div>
+
+        <div class="tpq-ag-item">
+          <div class="tpq-ag-time">12:55 PM</div>
+          <div class="tpq-ag-marker"><div class="tpq-ag-dot"></div><div class="tpq-ag-connector"></div></div>
+          <div class="tpq-ag-content"><div class="tpq-ag-session"><span class="tpq-ag-label">AI Productivity &ndash; Interactive Session (Bob)</span></div></div>
+        </div>
+
+        <div class="tpq-ag-item">
+          <div class="tpq-ag-time">1:25 PM</div>
+          <div class="tpq-ag-marker"><div class="tpq-ag-dot"></div><div class="tpq-ag-connector"></div></div>
+          <div class="tpq-ag-content"><div class="tpq-ag-session"><span class="tpq-ag-label">Hands-On Challenge with BobCoins / Team Formation</span></div></div>
+        </div>
+
+        <div class="tpq-ag-item">
+          <div class="tpq-ag-time">1:55 PM</div>
+          <div class="tpq-ag-marker"><div class="tpq-ag-dot"></div><div class="tpq-ag-connector"></div></div>
+          <div class="tpq-ag-content"><div class="tpq-ag-session"><span class="tpq-ag-label">Build Block 1 &ndash; Architect Mode</span></div></div>
+        </div>
+
+        <div class="tpq-ag-item">
+          <div class="tpq-ag-time">3:25 PM</div>
+          <div class="tpq-ag-marker"><div class="tpq-ag-dot"></div><div class="tpq-ag-connector"></div></div>
+          <div class="tpq-ag-content"><div class="tpq-ag-session"><span class="tpq-ag-label">Build Block 2</span></div></div>
+        </div>
+
+        <div class="tpq-ag-item ag-break">
+          <div class="tpq-ag-time">4:25 PM</div>
+          <div class="tpq-ag-marker"><div class="tpq-ag-dot"></div><div class="tpq-ag-connector"></div></div>
+          <div class="tpq-ag-content"><div class="tpq-ag-session">Coffee Break</div></div>
+        </div>
+
+        <div class="tpq-ag-item">
+          <div class="tpq-ag-time">4:35 PM</div>
+          <div class="tpq-ag-marker"><div class="tpq-ag-dot"></div><div class="tpq-ag-connector"></div></div>
+          <div class="tpq-ag-content"><div class="tpq-ag-session"><span class="tpq-ag-label">Build Block 3</span></div></div>
+        </div>
+
+        <div class="tpq-ag-item">
+          <div class="tpq-ag-time">5:05 PM</div>
+          <div class="tpq-ag-marker"><div class="tpq-ag-dot"></div><div class="tpq-ag-connector"></div></div>
+          <div class="tpq-ag-content"><div class="tpq-ag-session"><span class="tpq-ag-label">Bob Pitch &ndash; 3 minutes + Q&amp;A</span></div></div>
+        </div>
+
+        <div class="tpq-ag-item">
+          <div class="tpq-ag-time">5:35 PM</div>
+          <div class="tpq-ag-marker"><div class="tpq-ag-dot"></div><div class="tpq-ag-connector"></div></div>
+          <div class="tpq-ag-content"><div class="tpq-ag-session">Closing Remarks</div></div>
+        </div>
+
+        <div class="tpq-ag-item ag-meal">
+          <div class="tpq-ag-time">7:00 PM</div>
+          <div class="tpq-ag-marker"><div class="tpq-ag-dot"></div><div class="tpq-ag-connector"></div></div>
+          <div class="tpq-ag-content"><div class="tpq-ag-session">Dinner</div></div>
+        </div>
+
+        <div class="tpq-ag-item">
+          <div class="tpq-ag-time">8:15 PM</div>
+          <div class="tpq-ag-marker"><div class="tpq-ag-dot"></div><div class="tpq-ag-connector"></div></div>
+          <div class="tpq-ag-content"><div class="tpq-ag-session">Evening Session</div></div>
+        </div>
+
+        <div class="tpq-ag-item ag-break">
+          <div class="tpq-ag-time">8:45 PM</div>
+          <div class="tpq-ag-marker"><div class="tpq-ag-dot"></div><div class="tpq-ag-connector"></div></div>
+          <div class="tpq-ag-content"><div class="tpq-ag-session">Socials</div></div>
+        </div>
+
+        <div class="tpq-ag-item ag-end">
+          <div class="tpq-ag-time">11:00 PM</div>
+          <div class="tpq-ag-marker"><div class="tpq-ag-dot"></div></div>
+          <div class="tpq-ag-content"><div class="tpq-ag-session">End of Day 1</div></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Day 2 -->
+    <div class="tpq-ag-day">
+      <div class="tpq-ag-day-header">
+        <span class="tpq-ag-day-badge">Day 2</span>
+        <span class="tpq-ag-day-title">11 September 2026</span>
+        <span class="tpq-ag-day-sub">10:00 AM &ndash; 2:00 PM</span>
+      </div>
+
+      <div class="tpq-ag-timeline">
+
+        <div class="tpq-ag-item">
+          <div class="tpq-ag-time">10:00 AM</div>
+          <div class="tpq-ag-marker"><div class="tpq-ag-dot"></div><div class="tpq-ag-connector"></div></div>
+          <div class="tpq-ag-content"><div class="tpq-ag-session">Welcome Back &amp; Recap of Day 1</div></div>
+        </div>
+
+        <div class="tpq-ag-item ag-break">
+          <div class="tpq-ag-time">10:15 AM</div>
+          <div class="tpq-ag-marker"><div class="tpq-ag-dot"></div><div class="tpq-ag-connector"></div></div>
+          <div class="tpq-ag-content"><div class="tpq-ag-session">Ice Breaker 4</div></div>
+        </div>
+
+        <div class="tpq-ag-item">
+          <div class="tpq-ag-time">10:30 AM</div>
+          <div class="tpq-ag-marker"><div class="tpq-ag-dot"></div><div class="tpq-ag-connector"></div></div>
+          <div class="tpq-ag-content"><div class="tpq-ag-session"><span class="tpq-ag-label">Session 1</span></div></div>
+        </div>
+
+        <div class="tpq-ag-item">
+          <div class="tpq-ag-time">11:00 AM</div>
+          <div class="tpq-ag-marker"><div class="tpq-ag-dot"></div><div class="tpq-ag-connector"></div></div>
+          <div class="tpq-ag-content"><div class="tpq-ag-session"><span class="tpq-ag-label">Session 2</span></div></div>
+        </div>
+
+        <div class="tpq-ag-item ag-break">
+          <div class="tpq-ag-time">11:30 AM</div>
+          <div class="tpq-ag-marker"><div class="tpq-ag-dot"></div><div class="tpq-ag-connector"></div></div>
+          <div class="tpq-ag-content"><div class="tpq-ag-session">Check-out</div></div>
+        </div>
+
+        <div class="tpq-ag-item">
+          <div class="tpq-ag-time">12:15 PM</div>
+          <div class="tpq-ag-marker"><div class="tpq-ag-dot"></div><div class="tpq-ag-connector"></div></div>
+          <div class="tpq-ag-content"><div class="tpq-ag-session">Closing Remarks &amp; Next Steps</div></div>
+        </div>
+
+        <div class="tpq-ag-item ag-meal">
+          <div class="tpq-ag-time">1:00 PM</div>
+          <div class="tpq-ag-marker"><div class="tpq-ag-dot"></div><div class="tpq-ag-connector"></div></div>
+          <div class="tpq-ag-content"><div class="tpq-ag-session">Networking Lunch</div></div>
+        </div>
+
+        <div class="tpq-ag-item ag-end">
+          <div class="tpq-ag-time">2:00 PM</div>
+          <div class="tpq-ag-marker"><div class="tpq-ag-dot"></div></div>
+          <div class="tpq-ag-content"><div class="tpq-ag-session">End of Program</div></div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+</div>

@@ -1,0 +1,201 @@
+<!-- =============================================
+     SECTION: What to Expect (Solutions + Program Goals)
+     Power Up & Pitch: IBM Technology Sales Blitz
+     Wix HTML — scroll disabled
+     ============================================= -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+  html, body { margin: 0; padding: 0; overflow: hidden; width: 100%; }
+  * { box-sizing: border-box; }
+
+  .tpq-exp {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: #ffffff;
+    padding: 72px 0;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .tpq-exp-inner {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  .tpq-exp-tag {
+    display: inline-block;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: #1d4ed8;
+    background: #eff6ff;
+    padding: .3rem 1rem;
+    border-radius: 100px;
+    margin-bottom: 1rem;
+  }
+
+  .tpq-exp-title {
+    font-size: clamp(1.7rem, 3.5vw, 2.6rem);
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -.5px;
+    margin-bottom: 1.2rem;
+    text-align: center;
+  }
+
+  .tpq-exp-intro {
+    font-size: .95rem;
+    color: #334155;
+    line-height: 1.8;
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 2.8rem;
+  }
+
+  .tpq-sol-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+    margin-bottom: 3rem;
+  }
+
+  .tpq-sol-card {
+    background: #f8faff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 1.5rem 1.7rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform .18s, box-shadow .18s, border-color .18s;
+  }
+
+  .tpq-sol-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #1d4ed8, #3b82f6);
+  }
+
+  .tpq-sol-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 28px rgba(29,78,216,.1);
+    border-color: rgba(59,130,246,.3);
+  }
+
+  .tpq-sol-name {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #1d4ed8;
+    margin-bottom: .5rem;
+  }
+
+  .tpq-sol-desc {
+    font-size: .88rem;
+    color: #334155;
+    line-height: 1.7;
+  }
+
+  .tpq-prog-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .tpq-prog-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .85rem;
+  }
+
+  .tpq-prog-item {
+    display: flex;
+    align-items: flex-start;
+    gap: .75rem;
+    background: #f8faff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 1rem 1.2rem;
+    transition: border-color .18s, box-shadow .18s;
+  }
+
+  .tpq-prog-item:hover {
+    border-color: rgba(29,78,216,.3);
+    box-shadow: 0 4px 16px rgba(29,78,216,.08);
+  }
+
+  .tpq-prog-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #1d4ed8;
+    flex-shrink: 0;
+    margin-top: 6px;
+  }
+
+  .tpq-prog-item span {
+    font-size: .9rem;
+    color: #334155;
+    font-weight: 500;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 640px) {
+    .tpq-exp { padding: 48px 0; }
+    .tpq-exp-title { font-size: 1.4rem; }
+    .tpq-sol-grid { grid-template-columns: 1fr; }
+    .tpq-prog-list { grid-template-columns: 1fr; }
+  }
+</style>
+
+<div style="width:100%;overflow:hidden;">
+<section class="tpq-exp">
+  <div class="tpq-exp-inner">
+
+    <div style="text-align:center;">
+      <span class="tpq-exp-tag">Immersive Learning</span>
+      <h2 class="tpq-exp-title">What to Expect</h2>
+    </div>
+
+    <p class="tpq-exp-intro">This immersive Sales Blitz combines strategic learning with practical application. Participants will gain insight into IBM&rsquo;s most relevant hardware and software offerings, including:</p>
+
+    <div class="tpq-sol-grid">
+
+      <div class="tpq-sol-card">
+        <div class="tpq-sol-name">IBM Power Virtual Server (PowerVS)</div>
+        <p class="tpq-sol-desc">Extend and modernize mission-critical workloads with flexibility and enterprise-class performance.</p>
+      </div>
+
+      <div class="tpq-sol-card">
+        <div class="tpq-sol-name">IBM FlashSystem</div>
+        <p class="tpq-sol-desc">Strengthen cyber resilience, data protection, and storage performance for business continuity.</p>
+      </div>
+
+      <div class="tpq-sol-card">
+        <div class="tpq-sol-name">watsonx Orchestrate</div>
+        <p class="tpq-sol-desc">Automate repetitive tasks and improve productivity with AI-powered workflow orchestration.</p>
+      </div>
+
+      <div class="tpq-sol-card">
+        <div class="tpq-sol-name">Bob AI</div>
+        <p class="tpq-sol-desc">Enable smarter conversations, faster decision-making, and stronger business engagement.</p>
+      </div>
+
+    </div>
+
+    <div class="tpq-prog-header">
+      <span class="tpq-exp-tag">Program Goals</span>
+      <h3 style="font-size:1.3rem;font-weight:700;color:#0f172a;">Expect a program designed to help you:</h3>
+    </div>
+
+    <div class="tpq-prog-list">
+      <div class="tpq-prog-item"><div class="tpq-prog-dot"></div><span>Position IBM technology with confidence</span></div>
+      <div class="tpq-prog-item"><div class="tpq-prog-dot"></div><span>Translate product features into business value</span></div>
+      <div class="tpq-prog-item"><div class="tpq-prog-dot"></div><span>Engage in meaningful sales discussions</span></div>
+      <div class="tpq-prog-item"><div class="tpq-prog-dot"></div><span>Collaborate with peers and IBM leaders</span></div>
+      <div class="tpq-prog-item"><div class="tpq-prog-dot"></div><span>Compete in interactive team-based challenges</span></div>
+    </div>
+
+  </div>
+</section>
+</div>

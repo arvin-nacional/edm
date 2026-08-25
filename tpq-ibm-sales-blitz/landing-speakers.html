@@ -1,0 +1,174 @@
+<!-- =============================================
+     SECTION: Speakers
+     Power Up & Pitch: IBM Technology Sales Blitz
+     Wix HTML — scroll disabled
+     ============================================= -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+  html, body { margin: 0; padding: 0; overflow: hidden; width: 100%; }
+  * { box-sizing: border-box; }
+
+  .tpq-spk {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: #ffffff;
+    padding: 72px 0;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .tpq-spk-inner {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  .tpq-spk-tag {
+    display: inline-block;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: #1d4ed8;
+    background: #eff6ff;
+    padding: .3rem 1rem;
+    border-radius: 100px;
+    margin-bottom: 1rem;
+  }
+
+  .tpq-spk-title {
+    font-size: clamp(1.7rem, 3.5vw, 2.6rem);
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -.5px;
+    text-align: center;
+    margin-bottom: 2.8rem;
+  }
+
+  .tpq-spk-group {
+    margin-bottom: 2.4rem;
+  }
+
+  .tpq-spk-group:last-child {
+    margin-bottom: 0;
+  }
+
+  .tpq-spk-group-label {
+    font-size: .78rem;
+    font-weight: 800;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: #1d4ed8;
+    text-align: center;
+    margin-bottom: 1.6rem;
+    padding-bottom: .6rem;
+    border-bottom: 2px solid #e5e7eb;
+  }
+
+  .tpq-spk-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+
+  .tpq-spk-card {
+    background: #f8faff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 1.5rem 1.7rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform .18s, box-shadow .18s, border-color .18s;
+  }
+
+  .tpq-spk-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #1d4ed8, #3b82f6);
+  }
+
+  .tpq-spk-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 28px rgba(29,78,216,.1);
+    border-color: rgba(59,130,246,.3);
+  }
+
+  .tpq-spk-name {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: .4rem;
+  }
+
+  .tpq-spk-role {
+    font-size: .85rem;
+    color: #334155;
+    line-height: 1.5;
+  }
+
+  .tpq-spk-company {
+    font-size: .82rem;
+    color: #64748b;
+    margin-top: .2rem;
+  }
+
+  @media (max-width: 640px) {
+    .tpq-spk { padding: 48px 0; }
+    .tpq-spk-inner { padding: 0 20px; }
+    .tpq-spk-title { font-size: 1.4rem; }
+    .tpq-spk-grid { grid-template-columns: 1fr; }
+  }
+</style>
+
+<div style="width:100%;overflow:hidden;">
+<section class="tpq-spk">
+  <div class="tpq-spk-inner">
+
+    <div style="text-align:center;">
+      <span class="tpq-spk-tag">Featured Speakers</span>
+      <h2 class="tpq-spk-title">Speakers</h2>
+    </div>
+
+    <div class="tpq-spk-group">
+      <div class="tpq-spk-group-label">Opening Remarks</div>
+      <div class="tpq-spk-grid">
+
+        <div class="tpq-spk-card">
+          <div class="tpq-spk-name">Jowie Cruzillo</div>
+          <div class="tpq-spk-role">Business Manager</div>
+          <div class="tpq-spk-company">Technopaq Incorporated</div>
+        </div>
+
+        <div class="tpq-spk-card">
+          <div class="tpq-spk-name">Mikki Barcelon</div>
+          <div class="tpq-spk-role">Ecosystem Leader</div>
+          <div class="tpq-spk-company">IBM Philippines</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="tpq-spk-group">
+      <div class="tpq-spk-group-label">Closing Remarks</div>
+      <div class="tpq-spk-grid">
+
+        <div class="tpq-spk-card">
+          <div class="tpq-spk-name">Reb Singian</div>
+          <div class="tpq-spk-role">Product Manager, IBM Software</div>
+          <div class="tpq-spk-company">Technopaq Incorporated</div>
+        </div>
+
+        <div class="tpq-spk-card">
+          <div class="tpq-spk-name">Lyn Torres</div>
+          <div class="tpq-spk-role">Brand Sales Specialist &ndash; Storage</div>
+          <div class="tpq-spk-company">IBM Philippines</div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+</div>

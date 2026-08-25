@@ -1,0 +1,142 @@
+<!-- =============================================
+     SECTION: Event Details + Register CTA
+     Power Up & Pitch: IBM Technology Sales Blitz
+     Wix HTML — scroll disabled
+     ============================================= -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+  html, body { margin: 0; padding: 0; overflow: hidden; width: 100%; }
+  * { box-sizing: border-box; }
+
+  .tpq-det {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: #f8faff;
+    padding: 72px 0;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .tpq-det-inner {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  .tpq-det-tag {
+    display: inline-block;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: #1d4ed8;
+    background: #eff6ff;
+    padding: .3rem 1rem;
+    border-radius: 100px;
+    margin-bottom: 1rem;
+  }
+
+  .tpq-det-title {
+    font-size: clamp(1.7rem, 3.5vw, 2.6rem);
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -.5px;
+    margin-bottom: 2.4rem;
+    text-align: center;
+  }
+
+  .tpq-det-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+    margin-bottom: 2.8rem;
+  }
+
+  .tpq-det-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 1.4rem 1.6rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .tpq-det-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #1d4ed8, #3b82f6);
+  }
+
+  .tpq-det-label {
+    font-size: .68rem;
+    font-weight: 800;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: #1d4ed8;
+    margin-bottom: .5rem;
+  }
+
+  .tpq-det-value {
+    font-size: .98rem;
+    font-weight: 700;
+    color: #111827;
+    line-height: 1.4;
+  }
+
+  .tpq-det-sub {
+    font-size: .83rem;
+    color: #6b7280;
+    margin-top: .25rem;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 640px) {
+    .tpq-det { padding: 48px 0; }
+    .tpq-det-inner { padding: 0 20px; }
+    .tpq-det-title { font-size: 1.4rem; }
+    .tpq-det-grid { grid-template-columns: 1fr; gap: .8rem; }
+  }
+</style>
+
+<div style="width:100%;overflow:hidden;">
+<section class="tpq-det">
+  <div class="tpq-det-inner">
+
+    <div style="text-align:center;">
+      <span class="tpq-det-tag">Mark Your Calendar</span>
+      <h2 class="tpq-det-title">Event Details</h2>
+    </div>
+
+    <div class="tpq-det-grid">
+
+      <div class="tpq-det-card">
+        <div class="tpq-det-label">Date</div>
+        <div class="tpq-det-value">10&ndash;11 September 2026</div>
+        <div class="tpq-det-sub">2-Day Event</div>
+      </div>
+
+      <div class="tpq-det-card">
+        <div class="tpq-det-label">Day 1 &mdash; Systems</div>
+        <div class="tpq-det-value">10:00 AM &ndash; 5:00 PM</div>
+        <div class="tpq-det-sub">IBM PowerVS + IBM FlashSystem</div>
+      </div>
+
+      <div class="tpq-det-card">
+        <div class="tpq-det-label">Day 2 &mdash; Software</div>
+        <div class="tpq-det-value">10:00 AM &ndash; 2:00 PM</div>
+        <div class="tpq-det-sub">watsonx Orchestrate + Bob AI</div>
+      </div>
+
+    </div>
+
+    <div class="tpq-det-card" style="margin-bottom:2.8rem;">
+      <div class="tpq-det-label">Venue</div>
+      <div class="tpq-det-value">Twin Lakes Hotel Tagaytay</div>
+      <div class="tpq-det-sub">LL2 Function Rooms</div>
+    </div>
+
+
+  </div>
+</section>
+</div>
