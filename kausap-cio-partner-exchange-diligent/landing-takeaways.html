@@ -1,0 +1,165 @@
+<!-- =============================================
+     SECTION: What You'll Take Away
+     KauSAP CIO Partner Exchange with Diligent
+     ============================================= -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+  html, body { margin: 0; padding: 0; overflow: hidden; width: 100%; }
+  * { box-sizing: border-box; }
+
+  :root {
+    --navy:        #1e3a8a;
+    --navy-mid:    #1e40af;
+    --gold:        #e8a020;
+    --gold-pale:   #fffbea;
+    --gold-soft:   #fef3c7;
+    --white:       #ffffff;
+    --text-dark:   #0f172a;
+    --text-mid:    #334155;
+    --text-muted:  #64748b;
+    --border:      #e2e8f0;
+    --section-alt: #f8fafc;
+  }
+
+
+  /* ── TAKEAWAYS ── */
+  .takeaways {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: var(--section-alt);
+    padding: 88px 0;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .takeaways-inner {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .section-tag {
+    display: inline-block; font-size: .78rem; font-weight: 700;
+    letter-spacing: .1em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: .8rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.7rem, 3.5vw, 2.6rem); font-weight: 800;
+    color: var(--text-dark); letter-spacing: -.5px; line-height: 1.2;
+    margin-bottom: 2.8rem;
+  }
+
+  /* Takeaway cards */
+  .takeaways-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .takeaway-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem 1.8rem;
+    transition: transform .18s, box-shadow .18s, border-color .18s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .takeaway-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--gold), #f59e0b);
+    opacity: 0;
+    transition: opacity .18s;
+  }
+
+  .takeaway-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 32px rgba(22,10,62,.12);
+    border-color: rgba(232,160,32,.4);
+  }
+
+  .takeaway-card:hover::before { opacity: 1; }
+
+  .takeaway-num {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--gold-soft);
+    line-height: 1;
+    margin-bottom: .8rem;
+  }
+
+  .takeaway-card h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.4;
+    margin-bottom: .8rem;
+  }
+
+  .takeaway-card p {
+    font-size: .9rem;
+    color: var(--text-mid);
+    line-height: 1.7;
+  }
+
+  @media (max-width: 640px) {
+    .takeaways { padding: 48px 0; }
+    .section-title { font-size: 1.4rem; margin-bottom: 2rem; }
+    .takeaways-grid { grid-template-columns: 1fr; gap: 1.2rem; }
+    .takeaway-card { padding: 1.5rem 1.3rem; }
+    .takeaway-num { font-size: 1.8rem; }
+    .takeaway-card h3 { font-size: .95rem; }
+    .takeaway-card p { font-size: .85rem; }
+  }
+</style>
+
+<div style="width:100%;overflow:hidden;">
+<section class="takeaways">
+  <div class="takeaways-inner">
+    
+    <div style="text-align:center;">
+      <span class="section-tag">Value Delivered</span>
+      <h2 class="section-title">What You&rsquo;ll Take Away</h2>
+    </div>
+
+    <div class="takeaways-grid">
+
+      <div class="takeaway-card">
+        <div class="takeaway-num">01</div>
+        <h3>Decode the SAP AI Landscape</h3>
+        <p>Get clarity around AI Foundation, Joule, Business Data Cloud, Clean Core, and Agentic AI&mdash;and how they connect to your transformation roadmap.</p>
+      </div>
+
+      <div class="takeaway-card">
+        <div class="takeaway-num">02</div>
+        <h3>Understand Your Clean Core Exposure</h3>
+        <p>Move beyond a simple yes/no compliance view and look at Clean Core through a more practical maturity perspective.</p>
+      </div>
+
+      <div class="takeaway-card">
+        <div class="takeaway-num">03</div>
+        <h3>Ask Better Questions</h3>
+        <p>Take away 5 pointed questions to bring into your next SAP vendor conversation.</p>
+      </div>
+
+      <div class="takeaway-card">
+        <div class="takeaway-num">04</div>
+        <h3>See Automation in Action</h3>
+        <p>Experience a live demonstration of Diligent&rsquo;s Smart Code Migration Tool, showing how non-Clean-Core patterns can be identified and addressed.</p>
+      </div>
+
+      <div class="takeaway-card">
+        <div class="takeaway-num">05</div>
+        <h3>Leave With Action</h3>
+        <p>Walk away with 3 practical week-one actions, not just another stack of presentation slides.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+</div>

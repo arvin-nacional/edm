@@ -1,0 +1,257 @@
+<!-- =============================================
+     SECTION: Hero
+     KauSAP CIO Partner Exchange with Diligent
+     ============================================= -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+  html, body { margin: 0; padding: 0; overflow: hidden; width: 100%; }
+  * { box-sizing: border-box; }
+
+  :root {
+    --navy:        #001f3f;
+    --navy-dark:   #001529;
+    --blue-bright: #3b9ff3;
+    --gold:        #e8a020;
+    --white:       #ffffff;
+    --text-light:  #e8f4ff;
+  }
+
+  /* ── HERO SECTION ── */
+  .hero {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: var(--navy-dark);
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://mcusercontent.com/586325cac2d38d2d2412ce5ec/images/dda4bfc5-b862-0f54-4b7e-edc3c36f78b6.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+  }
+
+
+  .hero-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 40px;
+    width: 100%;
+  }
+
+  .hero-logo {
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-logo img {
+    height: 60px;
+    width: auto;
+  }
+
+  .hero-eyebrow {
+    font-size: .95rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    letter-spacing: .02em;
+  }
+
+  .hero-title {
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: 800;
+    background: linear-gradient(90deg, #3b9ff3 0%, #5eb8f5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.15;
+    letter-spacing: -.5px;
+    margin-bottom: .5rem;
+  }
+
+  .hero-divider {
+    width: 120px;
+    height: 4px;
+    background: var(--gold);
+    margin: 1.5rem 0;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.3;
+    margin-bottom: 3rem;
+    max-width: 700px;
+  }
+
+  /* Event details box */
+  .hero-event-box {
+    display: flex;
+    gap: 1rem;
+    max-width: 580px;
+    background: transparent;
+    overflow: visible;
+  }
+
+  .event-date {
+    background: var(--white);
+    padding: 1.8rem 2rem;
+    text-align: center;
+    min-width: 135px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .event-month {
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #5ba3d0;
+    letter-spacing: .08em;
+    margin-bottom: .3rem;
+  }
+
+  .event-day {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #1e3a8a;
+    line-height: 1;
+    margin-bottom: .3rem;
+  }
+
+  .event-year {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #0f172a;
+  }
+
+  .event-details {
+    padding: 1.8rem 2rem;
+    flex: 1;
+    background: linear-gradient(135deg, #5ba3d0 0%, #4a8fc7 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .event-time {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: .6rem;
+  }
+
+  .event-venue {
+    font-size: .95rem;
+    font-weight: 400;
+    color: var(--white);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      min-height: 500px;
+    }
+    .hero-inner {
+      padding: 60px 24px;
+    }
+    .hero-logo img {
+      height: 48px;
+    }
+    .hero-title {
+      font-size: 2rem;
+    }
+    .hero-subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    .hero-event-box {
+      flex-direction: row;
+      max-width: 100%;
+      gap: .5rem;
+    }
+    .event-date {
+      min-width: 24px;
+      padding: .8rem .85rem;
+    }
+    .event-month {
+      font-size: .65rem;
+      margin-bottom: .12rem;
+    }
+    .event-day {
+      font-size: 1rem;
+      margin-bottom: .12rem;
+    }
+    .event-year {
+      font-size: .72rem;
+    }
+    .event-details {
+      padding: .85rem .9rem;
+    }
+    .event-time {
+      font-size: .72rem;
+      margin-bottom: .3rem;
+    }
+    .event-venue {
+      font-size: .58rem;
+      line-height: 1.35;
+    }
+  }
+</style>
+
+<div style="width:100%;overflow:hidden;">
+<section class="hero">
+  <div class="hero-bg"></div>
+  
+  <div class="hero-inner">
+    
+    <div class="hero-logo">
+      <img src="https://mcusercontent.com/586325cac2d38d2d2412ce5ec/images/73445329-f3b0-b2e3-3965-83ca951d954e.png" alt="KauSAP & Diligent">
+    </div>
+
+    <div class="hero-eyebrow">
+      KauSAP CIO Partner Exchange with Diligent
+    </div>
+
+    <h1 class="hero-title">From Legacy to Intelligence</h1>
+    
+    <div class="hero-divider"></div>
+
+    <p class="hero-subtitle">
+      Automating the Path to Clean Core SAP
+    </p>
+
+    <div class="hero-event-box">
+      <div class="event-date">
+        <div class="event-month">SEPT</div>
+        <div class="event-day">22ND</div>
+        <div class="event-year">2026</div>
+      </div>
+      <div class="event-details">
+        <div class="event-time">10:00am - 2:00pm | Tuesday</div>
+        <div class="event-venue">
+          Merino 1, 2F, Seda BGC, 30th st. cor.<br/>
+          11th Avenue, Bonifacio Global City
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+</div>

@@ -1,0 +1,177 @@
+<!-- =============================================
+     SECTION: Who Should Attend
+     KauSAP CIO Partner Exchange with Diligent
+     ============================================= -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+  html, body { margin: 0; padding: 0; overflow: hidden; width: 100%; }
+  * { box-sizing: border-box; }
+
+  :root {
+    --navy:        #1e3a8a;
+    --navy-mid:    #1e40af;
+    --gold:        #e8a020;
+    --gold-pale:   #fffbea;
+    --white:       #ffffff;
+    --text-dark:   #0f172a;
+    --text-mid:    #334155;
+    --text-muted:  #64748b;
+    --border:      #e2e8f0;
+    --section-alt: #f8fafc;
+  }
+
+
+  /* ── WHO SHOULD ATTEND ── */
+  .who-attend {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: var(--white);
+    padding: 88px 0;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .who-inner {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .section-tag {
+    display: inline-block; font-size: .78rem; font-weight: 700;
+    letter-spacing: .1em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: .8rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.7rem, 3.5vw, 2.6rem); font-weight: 800;
+    color: var(--text-dark); letter-spacing: -.5px; line-height: 1.2;
+    margin-bottom: 1.5rem;
+  }
+
+  .who-intro {
+    font-size: .97rem;
+    color: var(--text-mid);
+    line-height: 1.8;
+    max-width: 720px;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+  }
+
+  /* Pills grid */
+  .who-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .who-pill {
+    display: flex;
+    align-items: center;
+    gap: .65rem;
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: 100px;
+    padding: .7rem 1.4rem;
+    transition: transform .18s, box-shadow .18s, border-color .18s, background .18s;
+    cursor: default;
+  }
+
+  .who-pill:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(22,10,62,.1);
+    border-color: var(--gold);
+    background: var(--gold-pale);
+  }
+
+  .who-pill-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+
+  .who-pill span {
+    font-size: .92rem;
+    font-weight: 600;
+    color: var(--navy);
+  }
+
+  /* Priority industries */
+  .priority-note {
+    text-align: center;
+    font-size: .88rem;
+    color: var(--text-muted);
+    font-style: italic;
+    padding: 1.5rem 2rem;
+    background: var(--section-alt);
+    border-radius: 12px;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .priority-note strong {
+    color: var(--navy);
+    font-weight: 600;
+  }
+
+  @media (max-width: 600px) {
+    .who-attend { padding: 48px 0; }
+    .section-title { font-size: 1.4rem; margin-bottom: 1.2rem; }
+    .who-intro { font-size: .88rem; margin-bottom: 2rem; }
+    .who-pill { padding: .55rem 1rem; }
+    .who-pill span { font-size: .82rem; }
+    .who-pill-dot { width: 6px; height: 6px; }
+    .priority-note { font-size: .82rem; padding: 1.2rem 1.5rem; }
+  }
+</style>
+
+<div style="width:100%;overflow:hidden;">
+<section class="who-attend">
+  <div class="who-inner">
+    
+    <div style="text-align:center;">
+      <span class="section-tag">Audience</span>
+      <h2 class="section-title">Who Should Attend</h2>
+    </div>
+
+    <p class="who-intro">
+      This executive exchange is designed for senior technology and business leaders navigating SAP transformation, Clean Core compliance, and AI-driven innovation.
+    </p>
+
+    <div class="who-grid">
+      <div class="who-pill">
+        <div class="who-pill-dot"></div>
+        <span>CIOs</span>
+      </div>
+      <div class="who-pill">
+        <div class="who-pill-dot"></div>
+        <span>SAP Programme Leads</span>
+      </div>
+      <div class="who-pill">
+        <div class="who-pill-dot"></div>
+        <span>IT Heads</span>
+      </div>
+      <div class="who-pill">
+        <div class="who-pill-dot"></div>
+        <span>Business Transformation Leaders</span>
+      </div>
+      <div class="who-pill">
+        <div class="who-pill-dot"></div>
+        <span>Finance &amp; Accounting Leaders</span>
+      </div>
+      <div class="who-pill">
+        <div class="who-pill-dot"></div>
+        <span>SAP and Enterprise Applications Decision-Makers</span>
+      </div>
+    </div>
+
+    <div class="priority-note">
+      <strong>Priority industries:</strong> Oil &amp; Gas, Manufacturing, Airlines, Utilities, and Distribution.
+    </div>
+
+  </div>
+</section>
+</div>

@@ -1,0 +1,328 @@
+<!-- =============================================
+     SECTION: Event Agenda
+     KauSAP CIO Partner Exchange with Diligent
+     ============================================= -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+  html, body { margin: 0; padding: 0; overflow: hidden; width: 100%; }
+  * { box-sizing: border-box; }
+
+  :root {
+    --navy:        #1e3a8a;
+    --navy-mid:    #1e40af;
+    --gold:        #e8a020;
+    --white:       #ffffff;
+    --text-dark:   #0f172a;
+    --text-mid:    #334155;
+    --text-muted:  #64748b;
+    --border:      #e2e8f0;
+    --section-alt: #f8fafc;
+  }
+
+  /* ── AGENDA SECTION ── */
+  .agenda {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: var(--white);
+    padding: 48px 0;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .agenda-inner {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .agenda-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .section-tag {
+    display: inline-block; font-size: .78rem; font-weight: 700;
+    letter-spacing: .1em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: .8rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.7rem, 3.5vw, 2.6rem); font-weight: 800;
+    color: var(--text-dark); letter-spacing: -.5px; line-height: 1.2;
+  }
+
+  /* \u2500\u2500 TIMELINE \u2500\u2500 */
+  .agenda-timeline {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .agenda-item {
+    display: flex;
+    gap: 0;
+    position: relative;
+  }
+
+  /* Time column */
+  .agenda-time {
+    width: 110px;
+    min-width: 110px;
+    text-align: right;
+    padding-right: 1.2rem;
+    padding-top: 2px;
+    font-size: .8rem;
+    font-weight: 700;
+    color: var(--navy-mid);
+    line-height: 1.4;
+  }
+
+  /* Dot + line column */
+  .agenda-marker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 28px;
+    min-width: 28px;
+  }
+
+  .agenda-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--gold);
+    border: 2px solid var(--white);
+    box-shadow: 0 0 0 2px var(--gold);
+    flex-shrink: 0;
+    margin-top: 4px;
+    z-index: 1;
+  }
+
+  .agenda-item.ai-break .agenda-dot {
+    background: var(--border);
+    box-shadow: 0 0 0 2px #cbd5e1;
+  }
+
+  .agenda-item.ai-lunch .agenda-dot {
+    background: var(--navy);
+    box-shadow: 0 0 0 2px var(--navy);
+  }
+
+  .agenda-item.ai-end .agenda-dot {
+    background: var(--navy-mid);
+    box-shadow: 0 0 0 2px var(--navy-mid);
+  }
+
+  .agenda-connector {
+    flex: 1;
+    width: 2px;
+    background: var(--border);
+    margin-top: 4px;
+  }
+
+  .agenda-item:last-child .agenda-connector {
+    display: none;
+  }
+
+  /* Content column */
+  .agenda-content {
+    flex: 1;
+    padding-left: 1.2rem;
+    padding-bottom: 2rem;
+  }
+
+  .agenda-item:last-child .agenda-content {
+    padding-bottom: 0;
+  }
+
+  .agenda-session {
+    font-size: .98rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    line-height: 1.45;
+  }
+
+  .agenda-desc {
+    font-size: .88rem;
+    color: var(--text-mid);
+    line-height: 1.6;
+    margin-top: .4rem;
+  }
+
+  .agenda-item.ai-break .agenda-session {
+    font-weight: 500;
+    color: var(--text-muted);
+  }
+
+  .agenda-item.ai-lunch .agenda-session {
+    font-weight: 600;
+    color: var(--navy);
+  }
+
+  .agenda-item.ai-end .agenda-session {
+    font-weight: 700;
+    color: var(--navy-mid);
+  }
+
+  @media (max-width: 600px) {
+    .agenda { padding: 48px 0; }
+    .agenda-header { margin-bottom: 2rem; }
+    .section-title { font-size: 1.4rem; }
+    .agenda-time { width: 75px; min-width: 75px; font-size: .7rem; padding-right: .8rem; }
+    .agenda-marker { width: 22px; min-width: 22px; }
+    .agenda-dot { width: 10px; height: 10px; }
+    .agenda-content { padding-left: .7rem; padding-bottom: 1.4rem; }
+    .agenda-session { font-size: .88rem; }
+    .agenda-desc { font-size: .82rem; }
+  }
+</style>
+
+<div style="width:100%;overflow:hidden;">
+<section class="agenda">
+  <div class="agenda-inner">
+    
+    <div class="agenda-header">
+      <span class="section-tag">Program Flow</span>
+      <h2 class="section-title">Event Agenda</h2>
+    </div>
+
+    <div class="agenda-timeline">
+
+      <!-- 10:00 AM -->
+      <div class="agenda-item ai-break">
+        <div class="agenda-time">10:00 AM</div>
+        <div class="agenda-marker">
+          <div class="agenda-dot"></div>
+          <div class="agenda-connector"></div>
+        </div>
+        <div class="agenda-content">
+          <div class="agenda-session">Registration &amp; Networking</div>
+        </div>
+      </div>
+
+      <!-- 10:30 AM -->
+      <div class="agenda-item">
+        <div class="agenda-time">10:30 AM</div>
+        <div class="agenda-marker">
+          <div class="agenda-dot"></div>
+          <div class="agenda-connector"></div>
+        </div>
+        <div class="agenda-content">
+          <div class="agenda-session">Welcome Remarks</div>
+        </div>
+      </div>
+
+      <!-- 10:35 AM -->
+      <div class="agenda-item">
+        <div class="agenda-time">10:35 AM</div>
+        <div class="agenda-marker">
+          <div class="agenda-dot"></div>
+          <div class="agenda-connector"></div>
+        </div>
+        <div class="agenda-content">
+          <div class="agenda-session">From Legacy to Intelligence – Automating the path to Clean Core SAP</div>
+          <div class="agenda-desc">Why this topic matters</div>
+        </div>
+      </div>
+
+      <!-- 10:50 AM -->
+      <div class="agenda-item">
+        <div class="agenda-time">10:50 AM</div>
+        <div class="agenda-marker">
+          <div class="agenda-dot"></div>
+          <div class="agenda-connector"></div>
+        </div>
+        <div class="agenda-content">
+          <div class="agenda-session">Segment 1: The AI &amp; Cloud Vocabulary Briefing</div>
+          <div class="agenda-desc">AI Foundation, Joule Business Data Cloud, Clean Core, Agentic AI and the question behind it</div>
+        </div>
+      </div>
+
+      <!-- 11:05 AM -->
+      <div class="agenda-item">
+        <div class="agenda-time">11:05 AM</div>
+        <div class="agenda-marker">
+          <div class="agenda-dot"></div>
+          <div class="agenda-connector"></div>
+        </div>
+        <div class="agenda-content">
+          <div class="agenda-session">Segment 2: Cloud, RISE &amp; GROW - What It Actually Demands</div>
+          <div class="agenda-desc">RISE vs GROW, sovereign cloud, 3 practical implications</div>
+        </div>
+      </div>
+
+      <!-- 11:20 AM -->
+      <div class="agenda-item">
+        <div class="agenda-time">11:20 AM</div>
+        <div class="agenda-marker">
+          <div class="agenda-dot"></div>
+          <div class="agenda-connector"></div>
+        </div>
+        <div class="agenda-content">
+          <div class="agenda-session">Segment 3: The Clean Core Cost Watershed</div>
+          <div class="agenda-desc">The financial framing, the A/B/C/D grading model, and a live 2-minute SCMT demo</div>
+        </div>
+      </div>
+
+      <!-- 11:35 AM -->
+      <div class="agenda-item">
+        <div class="agenda-time">11:35 AM</div>
+        <div class="agenda-marker">
+          <div class="agenda-dot"></div>
+          <div class="agenda-connector"></div>
+        </div>
+        <div class="agenda-content">
+          <div class="agenda-session">Questions to Bring to Your Next SAP Vendor Conversation</div>
+        </div>
+      </div>
+
+      <!-- 11:45 AM -->
+      <div class="agenda-item">
+        <div class="agenda-time">11:45 AM</div>
+        <div class="agenda-marker">
+          <div class="agenda-dot"></div>
+          <div class="agenda-connector"></div>
+        </div>
+        <div class="agenda-content">
+          <div class="agenda-session">Actions for One Week</div>
+        </div>
+      </div>
+
+      <!-- 11:55 AM -->
+      <div class="agenda-item ai-break">
+        <div class="agenda-time">11:55 AM</div>
+        <div class="agenda-marker">
+          <div class="agenda-dot"></div>
+          <div class="agenda-connector"></div>
+        </div>
+        <div class="agenda-content">
+          <div class="agenda-session">Q&amp;A</div>
+        </div>
+      </div>
+
+      <!-- 12:10 PM -->
+      <div class="agenda-item ai-lunch">
+        <div class="agenda-time">12:10 PM</div>
+        <div class="agenda-marker">
+          <div class="agenda-dot"></div>
+          <div class="agenda-connector"></div>
+        </div>
+        <div class="agenda-content">
+          <div class="agenda-session">Lunch and Networking</div>
+        </div>
+      </div>
+
+      <!-- 1:10 PM -->
+      <div class="agenda-item ai-end">
+        <div class="agenda-time">1:10 PM</div>
+        <div class="agenda-marker">
+          <div class="agenda-dot"></div>
+        </div>
+        <div class="agenda-content">
+          <div class="agenda-session">Closing Remarks</div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+</div>
