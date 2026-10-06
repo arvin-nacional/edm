@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#641b46">
+  <title>AI-Powered Smarter Enterprise | Executive Tour Compendium</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #28232a;
+      --muted: #655e65;
+      --plum: #741c4d;
+      --red: #d52d36;
+      --line: #ddd3d9;
+      --tint: #f6eff3;
+    }
+
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #e8e5e7; color: var(--ink); font-family: Arial, Helvetica, sans-serif; }
+    button { font: inherit; }
+    .screen-tools { max-width: 210mm; margin: 24px auto 16px; display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 0 4px; }
+    .screen-tools p { margin: 0; font-size: 13px; line-height: 1.5; color: #504750; }
+    .screen-tools strong { display: block; color: var(--ink); font-size: 15px; }
+    .print-button { flex: none; padding: 12px 20px; border: 0; border-radius: 5px; background: var(--plum); color: white; font-size: 13px; font-weight: 700; cursor: pointer; }
+    .print-button:hover { background: #511334; }
+    .print-button:focus-visible, summary:focus-visible { outline: 3px solid #a84c7f; outline-offset: 4px; }
+    .page-wrap { padding: 0 20px 24px; overflow-x: auto; }
+    .sheet { width: 210mm; min-height: 297mm; margin: 0 auto; padding: 10mm 11mm 8mm; background: #fff; box-shadow: 0 8px 40px #3423301c; }
+    .brand-row { display: flex; justify-content: space-between; align-items: center; padding-bottom: 5mm; border-bottom: 0.3mm solid var(--line); }
+    .series { color: var(--plum); font-size: 8pt; font-weight: 700; letter-spacing: 1.2pt; text-transform: uppercase; }
+    .partners { display: flex; align-items: center; gap: 3mm; font-size: 10.5pt; font-weight: 700; }
+    .partners .lenovo { background: var(--red); color: #fff; padding: 1.5mm 2mm; letter-spacing: -0.3pt; }
+    .partners .intel { color: #086da9; font-size: 13pt; letter-spacing: -0.6pt; }
+    .partners .meldcx { letter-spacing: -0.4pt; }
+    .partner-divider { width: 0.25mm; height: 3.5mm; background: var(--line); }
+    .hero { position: relative; padding: 6mm 0 5mm; }
+    .eyebrow { margin: 0 0 2.5mm; color: var(--plum); font-size: 7.2pt; font-weight: 700; letter-spacing: 1.6pt; text-transform: uppercase; }
+    h1 { position: relative; z-index: 1; margin: 0; font-size: 29pt; line-height: 1.02; letter-spacing: -1.2pt; font-weight: 800; }
+    h1 span { color: var(--plum); }
+    .subtitle { margin: 3mm 0 0; font-size: 10pt; line-height: 1.4; }
+    .hero-mark { position: absolute; right: 1mm; top: 6mm; width: 24mm; height: 24mm; border: 0.3mm solid #ead6e0; border-radius: 50%; }
+    .hero-mark::before, .hero-mark::after { content: ""; position: absolute; border: 0.3mm solid #ead6e0; border-radius: 50%; }
+    .hero-mark::before { inset: 4mm; }
+    .hero-mark::after { inset: 8mm; background: var(--plum); border-color: var(--plum); }
+    .event-strip { display: flex; align-items: center; justify-content: space-between; gap: 3mm; padding: 3mm 3.5mm; background: var(--plum); color: #fff; font-size: 8.5pt; line-height: 1.3; }
+    .event-strip strong { font-size: 9pt; }
+    .event-strip .timezone { font-size: 7pt; opacity: 0.9; white-space: nowrap; }
+    .main-grid { display: grid; grid-template-columns: 65mm minmax(0, 1fr); gap: 7mm; margin-top: 5mm; }
+    .sidebar { padding-right: 5mm; border-right: 0.3mm solid var(--line); }
+    .section + .section { margin-top: 5mm; }
+    .section-heading { display: flex; gap: 2.5mm; align-items: center; margin-bottom: 2.5mm; }
+    .day-number { display: grid; place-items: center; flex: none; width: 9mm; height: 9mm; color: var(--plum); background: var(--tint); border-top: 0.7mm solid var(--plum); font-size: 16pt; font-weight: 700; letter-spacing: -0.7pt; }
+    .section-heading h2 { margin: 0; font-size: 11pt; line-height: 1.2; letter-spacing: -0.3pt; }
+    .section-heading p { margin: 1mm 0 0; color: var(--plum); font-size: 7.1pt; font-weight: 700; letter-spacing: 0.4pt; text-transform: uppercase; }
+    .schedule { width: 100%; border-collapse: collapse; font-size: 8.1pt; line-height: 1.3; }
+    .schedule th, .schedule td { padding: 1.7mm 0; border-bottom: 0.2mm solid var(--line); vertical-align: top; text-align: left; }
+    .schedule th { width: 18mm; padding-right: 2mm; font-weight: 700; white-space: nowrap; font-variant-numeric: tabular-nums; }
+    .schedule tr:last-child th, .schedule tr:last-child td { border-bottom: 0; }
+    .schedule strong { font-weight: 700; }
+    .detail { display: block; margin-top: 0.5mm; color: var(--muted); font-size: 7.3pt; line-height: 1.35; }
+    .note-marker { color: var(--plum); font-size: 6.5pt; vertical-align: super; }
+    .mini-heading { margin: 0 0 2mm; color: var(--plum); font-size: 7.2pt; letter-spacing: 1pt; text-transform: uppercase; }
+    .demo-panel { padding: 3.5mm; background: var(--tint); border-top: 0.7mm solid var(--plum); }
+    .demo-panel h3 { margin: 0 0 1mm; font-size: 11pt; letter-spacing: -0.2pt; }
+    .demo-panel .intro { margin: 0 0 2.5mm; font-size: 7.3pt; color: var(--muted); line-height: 1.4; }
+    .demo-list { margin: 0; }
+    .demo-list dt { margin-top: 2mm; font-size: 8pt; font-weight: 700; }
+    .demo-list dd { margin: 0.5mm 0 0; color: var(--muted); font-size: 7.5pt; line-height: 1.35; }
+    .lab-format { margin: 3mm 0 0; border-top: 0.2mm solid #d9c6d1; padding-top: 2mm; color: var(--muted); font-size: 7pt; line-height: 1.4; }
+    .base-note { margin: 3mm 0 0; font-size: 7.4pt; line-height: 1.5; color: var(--muted); }
+    .base-note strong { color: var(--ink); }
+    .day-two .schedule { font-size: 8.2pt; }
+    .day-two .schedule th { width: 29mm; font-size: 7.7pt; }
+    .day-two .schedule th, .day-two .schedule td { padding-top: 1.55mm; padding-bottom: 1.55mm; }
+    .period { margin: 3mm 0 0.6mm; color: var(--plum); font-size: 7pt; font-weight: 700; letter-spacing: 0.85pt; text-transform: uppercase; }
+    .day-two .period:first-of-type { margin-top: 0; }
+    .inline-program { margin: 2mm 0 2.5mm; padding: 2.5mm 3mm; background: var(--tint); font-size: 7.2pt; line-height: 1.45; color: var(--muted); }
+    .inline-program strong { color: var(--plum); }
+    .inline-program p { margin: 0; }
+    .inline-program p + p { margin-top: 1.5mm; }
+    .footer { display: flex; justify-content: space-between; align-items: flex-end; gap: 5mm; border-top: 0.35mm solid var(--plum); margin-top: 4mm; padding-top: 2.5mm; font-size: 6.8pt; line-height: 1.4; color: var(--muted); }
+    .footer p { margin: 0; }
+    .footer .folio { flex: none; color: var(--plum); text-align: right; font-weight: 700; font-size: 7pt; }
+    .review-notes { max-width: 210mm; margin: 0 auto 32px; padding: 16px 20px; border: 1px solid #c8bec5; border-radius: 6px; color: #51464e; background: #f4f0f2; font-size: 13px; line-height: 1.6; }
+    .review-notes summary { cursor: pointer; font-weight: 700; color: var(--plum); }
+    .review-notes ul { padding-left: 20px; margin-bottom: 0; }
+    .review-notes p { margin-bottom: 0; }
+
+    @page { size: A4 portrait; margin: 0; }
+    @media print {
+      html, body { margin: 0; padding: 0; background: #fff; }
+      body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .screen-tools, .review-notes { display: none !important; }
+      .page-wrap { padding: 0; overflow: visible; }
+      .sheet { margin: 0; box-shadow: none; min-height: 0; }
+      .section, .inline-program, tr { break-inside: avoid; }
+    }
+
+    @media screen and (max-width: 840px) {
+      .screen-tools { margin: 16px 20px; }
+      .screen-tools p { font-size: 11px; }
+      .screen-tools strong { font-size: 13px; }
+      .print-button { padding: 11px 14px; font-size: 12px; }
+      .sheet { margin: 0; }
+      .review-notes { margin: 0 20px 24px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="screen-tools">
+    <p><strong>Your executive tour, on one page.</strong>A4 portrait · Single-sided · Print at 100% · Turn off browser headers &amp; footers</p>
+    <button type="button" class="print-button" id="print-button">Print / Save PDF</button>
+  </div>
+
+  <div class="page-wrap">
+    <main class="sheet" aria-label="One-page executive tour compendium">
+      <header>
+        <div class="brand-row">
+          <div class="series">Lenovo Leaders Circle ’26</div>
+          <div class="partners" aria-label="Lenovo, Intel and meldCX">
+            <span class="lenovo">Lenovo</span>
+            <span class="intel">intel</span>
+            <span class="partner-divider" aria-hidden="true"></span>
+            <span class="meldcx">meldCX</span>
+          </div>
+        </div>
+        <div class="hero">
+          <p class="eyebrow">Executive tour compendium</p>
+          <h1>AI-Powered<br><span>Smarter Enterprise</span></h1>
+          <p class="subtitle">Executive Lab &amp; Learning Tour with Intel and meldCX</p>
+          <div class="hero-mark" aria-hidden="true"></div>
+        </div>
+        <div class="event-strip">
+          <strong>September 28–30, 2026</strong>
+          <span>Cagayan de Oro City, Philippines</span>
+          <span class="timezone">All times PHT · UTC+8</span>
+        </div>
+      </header>
+
+      <div class="main-grid">
+        <div class="sidebar">
+          <section class="section" aria-labelledby="day-one-heading">
+            <div class="section-heading">
+              <span class="day-number" aria-label="Day 1">01</span>
+              <div><h2 id="day-one-heading">Arrive &amp; connect</h2><p>Mon · September 28</p></div>
+            </div>
+            <table class="schedule" aria-label="September 28 itinerary">
+              <tbody>
+                <tr><th scope="row">12:00 PM</th><td>Be at Manila airport</td></tr>
+                <tr><th scope="row">2:20 PM<span class="note-marker">*</span></th><td><strong>Manila → CDO · PAL</strong><span class="detail">95-minute flight to Laguindingan Airport. Coaster transfer to hotel: approx. 35 minutes.</span></td></tr>
+                <tr><th scope="row">4:30 PM</th><td><strong>Seda Centrio check-in</strong><span class="detail">Welcome kit in your room</span></td></tr>
+                <tr><th scope="row">7:00 PM</th><td><strong>Welcome dinner</strong><span class="detail">Cucina Higala · Hosted by Lenovo, Intel &amp; meldCX, with a sneak peek of the tour.</span></td></tr>
+                <tr><th scope="row">9:00 PM</th><td>Return to Seda Centrio</td></tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="section" aria-labelledby="day-three-heading">
+            <div class="section-heading">
+              <span class="day-number" aria-label="Day 3">03</span>
+              <div><h2 id="day-three-heading">Homeward bound</h2><p>Wed · September 30</p></div>
+            </div>
+            <table class="schedule" aria-label="September 30 itinerary">
+              <tbody>
+                <tr><th scope="row">7:00 AM<span class="note-marker">*</span></th><td>Breakfast</td></tr>
+                <tr><th scope="row">8:00 AM</th><td>Depart Seda Centrio<span class="detail">Transfer to the airport</span></td></tr>
+                <tr><th scope="row">11:15 AM</th><td><strong>CDO → Manila · PAL</strong><span class="detail">95-minute flight</span></td></tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="section demo-panel" aria-labelledby="demo-heading">
+            <p class="mini-heading">Inside the lab · Sept 29</p>
+            <h3 id="demo-heading">AI in action</h3>
+            <p class="intro">Featured demos at the meldCX office</p>
+            <dl class="demo-list">
+              <dt>Journeys</dt>
+              <dd>People counting &amp; zone engagement</dd>
+              <dt>Intelligent signage</dt>
+              <dd>Audience measurement &amp; dynamic signage triggering</dd>
+              <dt>Smart cities</dt>
+              <dd>Vehicle analytics &amp; traffic measurement</dd>
+              <dt>SALI</dt>
+              <dd>Post office parcel-shipping kiosk</dd>
+            </dl>
+            <p class="lab-format"><strong>Planned demo format:</strong> 1-hour presentation &amp; demo; 2 groups of 12. Final rotation timing to be confirmed.</p>
+          </section>
+
+          <p class="base-note"><strong>Your base</strong><br>Seda Centrio, Cagayan de Oro<br>Hotel departures and returns are listed in the daily agenda.</p>
+        </div>
+
+        <section class="day-two" aria-labelledby="day-two-heading">
+          <div class="section-heading">
+            <span class="day-number" aria-label="Day 2">02</span>
+            <div><h2 id="day-two-heading">Explore. Experience. Exchange.</h2><p>Tue · September 29</p></div>
+          </div>
+
+          <p class="period">Morning / The enterprise AI lab</p>
+          <table class="schedule" aria-label="September 29 morning itinerary, AM unless marked PM">
+            <tbody>
+              <tr><th scope="row">9:00–9:30 AM</th><td>Transfer: Seda Centrio → meldCX</td></tr>
+              <tr><th scope="row">9:30–9:40 AM</th><td>Registration at meldCX office</td></tr>
+              <tr><th scope="row">9:40–10:00 AM</th><td><strong>Opening &amp; Lenovo Success with AI Innovators</strong><span class="detail">Kumar Mitra or Tricia · Speaker to be confirmed</span></td></tr>
+              <tr><th scope="row">10:10–10:20 AM</th><td>Opening by meldCX</td></tr>
+              <tr><th scope="row">10:20–10:35 AM</th><td><strong>Intel alliance session</strong></td></tr>
+              <tr><th scope="row">10:35–10:45 AM</th><td>Break</td></tr>
+              <tr><th scope="row">10:45–11:05 AM<span class="note-marker">*</span></th><td><strong>AI solutions tour by meldCX</strong><span class="detail">See “AI in action” for featured demos</span></td></tr>
+              <tr><th scope="row">11:25–11:30 AM</th><td>Closing remarks by Lenovo</td></tr>
+              <tr><th scope="row">11:30–11:45 AM</th><td>Transfer to Fat Chef · Uptown branch</td></tr>
+              <tr><th scope="row">11:45 AM–1:00 PM</th><td><strong>Networking lunch at Fat Chef</strong></td></tr>
+            </tbody>
+          </table>
+
+          <p class="period">Afternoon / AI in the community</p>
+          <table class="schedule" aria-label="September 29 afternoon itinerary">
+            <tbody>
+              <tr><th scope="row">1:00–1:30 PM</th><td>Transfer to RISE AI Laboratory</td></tr>
+              <tr><th scope="row">1:30–2:30 PM</th><td><strong>RISE AI Laboratory school tour</strong><span class="detail">Dansolihon School</span></td></tr>
+            </tbody>
+          </table>
+          <div class="inline-program" aria-label="RISE AI Laboratory session details">
+            <p><strong>RISE visit, up close</strong><br>1:30–1:40 PM · Arrival &amp; school introductions<br>1:40–1:50 PM · AI classroom tour<br>1:50–2:15 PM · AI demo &amp; server showcase</p>
+          </div>
+          <table class="schedule" aria-label="September 29 city visit itinerary">
+            <tbody>
+              <tr><th scope="row">2:30–3:10 PM</th><td>Travel back to the city</td></tr>
+              <tr><th scope="row">3:10–4:00 PM</th><td>Travel buffer / allowance for delays</td></tr>
+              <tr><th scope="row">4:00–4:45 PM</th><td><strong>Courtesy visit with the Mayor</strong><span class="detail">Cagayan de Oro City Hall</span></td></tr>
+            </tbody>
+          </table>
+          <div class="inline-program" aria-label="City Hall session details">
+            <p><strong>City Hall programme</strong><br>4:00 PM · Arrival &amp; seating &nbsp; / &nbsp; 4:10 PM · Welcome by Thor<br>4:15 PM · Mayor’s message &nbsp; / &nbsp; 4:25 PM · Q&amp;A<br>4:35–4:45 PM · Photo opportunity &amp; closing</p>
+          </div>
+
+          <p class="period">Evening / Conversation &amp; connection</p>
+          <table class="schedule" aria-label="September 29 evening itinerary">
+            <tbody>
+              <tr><th scope="row">4:45–5:00 PM</th><td>Transfer: City Hall → Seda Centrio</td></tr>
+              <tr><th scope="row">5:00–7:00 PM</th><td>Freshen up at the hotel</td></tr>
+              <tr><th scope="row">7:00–7:20 PM</th><td>Transfer to La Baia</td></tr>
+              <tr><th scope="row">7:20–10:20 PM</th><td><strong>Dinner &amp; drinks · La Baia Cucina + Bar</strong><span class="detail">Entertainment hosted by meldCX</span></td></tr>
+              <tr><th scope="row">10:20–10:40 PM</th><td>Return to Seda Centrio</td></tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+
+      <footer class="footer">
+        <p>Programme subject to confirmation. *Flight timing, demo duration and breakfast window require confirmation.<br>Time ranges follow the supplied itinerary; please follow the final travel advisory and your issued flight ticket.</p>
+        <p class="folio">EXECUTIVE FIELD GUIDE<br>28–30 SEP 2026 &nbsp; / &nbsp; 01</p>
+      </footer>
+    </main>
+  </div>
+
+  <details class="review-notes">
+    <summary>Organiser review — confirm before final distribution (not printed)</summary>
+    <ul>
+      <li><strong>September 28 flight:</strong> 2:20 PM is listed beside MNL → CDO, but the source also refers to arrival at Laguindingan Airport. Confirm whether this is departure or arrival. The 12:00 PM Manila airport time is retained.</li>
+      <li><strong>September 29 morning:</strong> the 10:20–10:35 AM Intel session is 15 minutes, not the listed 20. The 10:45–11:05 AM AI tour is 20 minutes, not the listed 40. Separate notes call for a one-hour demo within a 9:30–11:30 AM office visit. The 10:00–10:10 AM and 11:05–11:25 AM gaps are left unassigned.</li>
+      <li><strong>Session date:</strong> the separate meldCX agenda is labelled “day 3,” but the main itinerary puts meldCX, RISE and City Hall on September 29 and departure on September 30. This guide follows the main itinerary.</li>
+      <li><strong>RISE session:</strong> 1:50–2:15 PM is 25 minutes, not the listed 20. The remaining 2:15–2:30 PM is not assigned in the source. The guide retains the stated times without inventing an activity.</li>
+      <li><strong>September 30 breakfast:</strong> the listed 90 minutes from 7:00 AM overlaps the 8:00 AM hotel departure. Breakfast is shown by start time only, pending confirmation.</li>
+      <li><strong>Speaker:</strong> confirm Kumar Mitra or Tricia for the Lenovo opening.</li>
+    </ul>
+    <p><strong>meldCX setup:</strong> presentation screen, speaker with microphone and chairs. Planned demo format: one-hour presentation and demo, with two groups of 12. These production requirements are kept off the attendee’s printed page.</p>
+    <p><strong>Print settings:</strong> A4, portrait, 100% scale, no browser headers or footers. The page includes its own safe margins. Enable background graphics if your browser does not preserve them automatically.</p>
+  </details>
+  <script>
+    document.getElementById('print-button').addEventListener('click', () => window.print());
+  </script>
+</body>
+</html>
